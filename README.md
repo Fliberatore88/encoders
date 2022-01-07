@@ -14,21 +14,21 @@ Encoders es una empresa hecha por programadores para programadores, diseñadores
 
 ## Descripción de nuestro equipo.
 
-- Aurercys Arias
+- ### Aurercys Arias
 Abogada de profesión, venezolana  viviendo en Argentina, amante de las frases desconocidas  y de la búsqueda de significados un día  apareció la palabra Scrum master y la inquietud de aprender nuevos conocimientos enfocados en la estructura de la programación. 
 
 
-- Blanca Alicia Tovar,
+- ### Blanca Alicia Tovar,
 Vivo en Argentina, Buenos Aires. Soy una entusiasta por la tecnología, siempre actualizándome con las herramientas disponibles en el mercado, hoy dia incursionando en el área de programación, mi formación académica está dirigida hacia Analista Tester.
 
 
-- Federico Liberatore
+- ### Federico Liberatore
 Divertido, descontracturado, aficionado al concepto de conocimiento y lógica el cual hace que hacer programación sea una dirección con un norte muy notorio. Hace varios años en sistemas ya estuve en diferentes posiciones como Soporte L3, analísta funcional y en los últimos tiempos como Implementation Specialist.
 
-- Rocchia Ignacio
+- ### Rocchia Ignacio
 Egresado técnico químico, encontré la programación por casualidad buscando cosas distintas para hacer y así emprendí mi camino por este rubro. Me falta mucho todavía pero nunca las ganas de aprender y relacionarme con gente.
 
-- Lopez Bonilla, Nicolas
+- ### Lopez Bonilla, Nicolas
 
 Soy un colombiano en Argentina, desde hace un par de años me metí en el mundo de los datos y empecé a utilizar SQL, para poder obtener la información que necesitaba. Hoy en dia soy analista de datos, pero el codeo me llama mucho la atención desde que comencé a usar SQL
 
