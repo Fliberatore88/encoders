@@ -14,7 +14,7 @@ Encoders es una empresa hecha por programadores para programadores, diseñadores
 
 ## Descripción de nuestro equipo.
 
-- #### Aurercys Arias
+- ### Aurercys Arias
 Abogada de profesión, venezolana  viviendo en Argentina, amante de las frases desconocidas  y de la búsqueda de significados un día  apareció la palabra Scrum master y la inquietud de aprender nuevos conocimientos enfocados en la estructura de la programación. 
 
 
