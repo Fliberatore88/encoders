@@ -9,19 +9,19 @@ app.get ('/', (req,res) => {
     res.sendFile (path.resolve (__dirname, 'views', 'index.html'));
 })
 
-app.get ('/Detalle-de-producto', (req,res) => {
+app.get ('/detalle-de-producto', (req,res) => {
     res.sendFile (path.resolve(__dirname, 'views','productDetail.html'))
 })
 
-app.get ('/Carrito-de-compras', (req,res) => {
+app.get ('/carrito-de-compras', (req,res) => {
     res.sendFile (path.resolve(__dirname, 'views','productCar.html'))
 })
 
-app.get ('/Registro', (req,res) => {
+app.get ('/registro', (req,res) => {
     res.sendFile (path.resolve(__dirname, 'views','register.html'))
 })
 
-app.get ('/Login', (req,res) => {
+app.get ('/login', (req,res) => {
     res.sendFile (path.resolve(__dirname, 'views','login.html'))
 })
 
