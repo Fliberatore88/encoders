@@ -25,6 +25,3 @@ Menos reuniones largas y comenzar a implementar las Dailys.
 No definir sobre un tema en particular.
 
 
-### Tablero de Trello
-- https://trello.com/b/YTNpX8mV/ecomerce 
-

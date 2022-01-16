@@ -47,4 +47,7 @@ Soy un colombiano en Argentina, desde hace un par de años me metí en el mundo 
 - Colores https://material.io/resources/color/#!/?view.left=0&view.right=0&secondary.color=CCFF90&primary.color=0D47A1&primary.text.color=ffffff
 - Logo: Logo en carpeta /Logo
 
+### Tablero de Trello
+- https://trello.com/b/YTNpX8mV/ecomerce
+
 
