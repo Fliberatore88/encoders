@@ -24,4 +24,5 @@ Trabajando en equipo y levantando la mano si necesitamos ayuda.
 Menos reuniones largas y comenzar a implementar las Dailys.
 No definir sobre un tema en particular.
 
+### hola
 
