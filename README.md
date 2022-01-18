@@ -50,6 +50,5 @@ Soy un colombiano en Argentina, desde hace un par de años me metí en el mundo 
 ### Tablero de Trello
 - https://trello.com/b/YTNpX8mV/ecomerce
 
-prueba otra vez
 
 
