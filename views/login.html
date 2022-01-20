@@ -7,24 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/login.css">
     <title>Encoders Logueate!</title>
 </head>
 
 <body>
     <header>
-        <img src="/images/logo-trabajo-equipo.jpg" alt="Logo Encoders">
-        <h1> Hola que tal, esta tipografía es monserrat?</h1>
+        <div class="container-logo">
+            <a href="/">
+            <img src="/images/logo-modelo-2.png" alt="Logo Encoders">
+            </a>
+        </div>
+        <form action="/detalle-de-producto">
+        <div id="search-lens">
+            <input id="searcher" type="text" name="searcher" placeholder="Buscá el producto que necesitás">
+            <i class="fas fa-search"></i>
+        </div>
+        </form>
 
+        <nav class="Header-Navbar">
+            
+            <!-- Comienza el nav, listas dentro de  tags a -->
+            <ul class="nav">
+                <a href="">
+                    <li>Mi cuenta</li>
+                </a>
+                    <a href="">
+                        <li>Ingresá</li>
+                    </a>
+                    <a href="">
+                        <li>Mi Carrito</li>
+                    </a>
+            </ul>     
+            <!-- Termina el nav.-->
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="container-banner">
+            <div class="cuadrado-opacity">
+        <img class= "img-banner" src="/images/teclado2.jpg" alt="Home Banner">
+        </div>
+        </div>
     </header>
 
     <main>
 
     </main>
+    <section>
+        <article>
+            <div class="container-door">
+                <img class="doorshut" src="/images/doorshut.png" alt="Door Shut">
+            </div>
 
+            <form action="/login.html">
+                <label for="username">Usuario</label>
+                <input type="text" name="username" id="username" placeholder="Ingresá tu nombre de usuario">
+                <br>
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña">
+                <br>
+                <label for="remember-me">Recordar mi cuenta</label>
+                <input type="checkbox" name="remember-me" id="remember-me">
+            </form>
+
+            <p>Recuperar mi contraseña</p>
+            <p>Política de privacidad</p>
+        </article>
+    </section>
 
     <footer>
 

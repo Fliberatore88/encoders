@@ -3,5 +3,48 @@
 }
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
+/* HEADER */
+header {
+    background-color: #0d47a1;
+}
+
+header img { 
+    width: 100%;
+}
+.fa-search {
+    color: #ccff90;
+    }
+li {
+    color: #ccff90;
+}
+.img-banner {
+    height: 115px;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+
+/* HEADER */
+
+/* MAIN */
+.container-door {
+position: relative;
+
+}
+.doorshut {
+    width: 150px;
+    height: 140px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 70%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* MAIN */
