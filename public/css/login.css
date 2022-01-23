@@ -1,3 +1,4 @@
+/* REGLAS GENERALES */
 * {
     box-sizing: border-box;
 }
@@ -7,17 +8,50 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* REGLAS GENERALES */
+
+
 /* HEADER */
 header {
     background-color: #0d47a1;
 }
 
-header img { 
+.container-logo {
+    max-width: 50%;
+}
+.img-logo {
     width: 100%;
 }
+.container-logo-searchbar-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header form {
+    display: flex;
+    max-width: 100%;
+}
+
+#search-lens {
+    position: relative;
+    max-width: 50%;
+}
 .fa-search {
-    color: #ccff90;
+    color: #000000;
+    position: absolute;
+    left: 150px;
+    top: 2px;
     }
+    .container-cart {
+        z-index: 2;
+        top: 3px;
+        left: 100px;
+        position: relative;
+    }
+.fa-shopping-cart {
+    color: #FFFFFF; 
+    position: absolute;
+}
 li {
     color: #ccff90;
 }
@@ -29,6 +63,7 @@ li {
 
 
 /* HEADER */
+
 
 /* MAIN */
 .container-door {
