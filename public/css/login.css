@@ -52,7 +52,11 @@ header form {
     color: #FFFFFF; 
     position: absolute;
 }
+ul {
+    list-style: none;
+}
 li {
+    text-decoration: none;
     color: #ccff90;
 }
 .img-banner {
