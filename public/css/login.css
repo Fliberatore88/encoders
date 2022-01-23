@@ -12,11 +12,27 @@ header {
     background-color: #0d47a1;
 }
 
-header img { 
+.container-logo {
+    width: 50%;
+}
+.img-logo {
     width: 100%;
+}
+.container-logo-searchbar-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header form {
+    display: flex;
+    width: 50%;
+}
+#search-lens {
+    position: flex;
 }
 .fa-search {
     color: #ccff90;
+    position: absolute;
     }
 li {
     color: #ccff90;
