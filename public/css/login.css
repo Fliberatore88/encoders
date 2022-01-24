@@ -27,6 +27,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 50%;
+    
 }
 header form {
     display: flex;
@@ -45,9 +47,8 @@ header form {
     .container-cart {
         z-index: 2;
         top: 3px;
-        left: 100px;
+        left: 90px;
         position: relative;
-        overflow: visible;
     }
 .fa-shopping-cart {
     color: #FFFFFF; 
