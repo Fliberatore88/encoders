@@ -47,6 +47,8 @@ header form {
     }
     .container-cart {
         z-index: 2;
+        align-self: center;
+        align-content: space-between;
     }
 .fa-shopping-cart {
     color: #000000; 
