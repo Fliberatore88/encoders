@@ -10,45 +10,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/login.css">
     <title>Encoders</title>
 </head>
 <body>
     <header>
-            <div class="logo">
-                <img src="/images/logo-trabajo-equipo.JPG" width="200" alt="Logo Encoders">
-            </div>  
-            <div class="search-bar">
-                <form action="/productDetail.html" method="GET">
-                    <input type="text" name="producto" value="Buscar..." id="barraDeProductos">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form>
+        <div class="container-logo-searchbar-cart">
+            <div class="container-logo">
+                <a href="/">
+                    <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
+                </a>
             </div>
-            <div class="log-in-button">
-                <a href="/views/login.html"><i class="fas fa-sign-in-alt"></i></a>
+            <div class="container-search-and-cart">
+                <form action="/detalle-de-producto">
+                    <div id="search-lens">
+                        <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
+                    </div>
+
+                    <div class="container-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
             </div>
-            <div class="carrito">
-                <a href="/views/productCar.html"><i class="fas fa-shopping-cart"></i></a>
+        </form>
+
+        <nav
+            class="Header-Navbar">
+
+            <!-- Comienza el nav, listas dentro de  tags a -->
+            <ul class="nav">
+                <a href="">
+                    <li>Mi cuenta</li>
+                </a>
+                <a href="/login">
+                    <li>Ingresá</li>
+                </a>
+                <a href="/carrito-de-compras">
+                    <li>Mi Carrito</li>
+                </a>
+            </ul>
+            <!-- Termina el nav.-->
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="container-banner">
+            <div class="cuadrado-opacity">
+                <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
             </div>
+        </div>
     </header>
     <main>
-        <!--desplegable del costado -->
-        <!-- carrousel de imagenes-->
-        <!-- arma tu pc -->
-        <!-- algunas ofertas?? -->
+        <section class="carrusel">
+        </section>
+        <section class="arma-tu-pc"></section>
         <section>
-<<<<<<< HEAD
-            <div>
-                <ul class="carrusel">
-=======
-            <div class="carrousel">
-                <button class="anterior">anterior</button>
-                <button class="posterior">posterior</button>
-                <ul>
->>>>>>> 69fc0f2e60a212f963bf6c9bb4361eadc0d32359
-                    <li class="imagenes"><img src="images/laptop-mac.jpg" alt="laptop mac"></li>
-                    <li class="imagenes"><img src="images/laptop-HP.jpg" alt="laptop HP"></li>
-                    <li class="imagenes"><img src="images/pc-gamer-armada.jpg" alt="pc armada"></li>
-                </ul>
+            <h3>Ofertas limitadas</h3>
+            <div class="contenedor-productos">
+                <section class="ofertas">
+                    <div class="productos">
+                        <article>
+                            <img src="images/laptop-HP.jpg" alt="Laptop-Hp" width="500px" class="imagen-de-producto">
+                            <div class="main-articulo">
+                                <p class="precio">$</p>
+                                <p class="descuento">mouse inalambrico de regalo</p>
+                                <h4 class="descripcion">Laptop Hp stream pro 11</h4>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="images/laptop-mac.jpg" alt="MacBook" width="500px" class="imagen-de-producto">
+                            <div class="main-articulo">
+                                <p class="precio">$</p>
+                                <p class="descuento">20% off</p>
+                                <h4 class="descripcion">MacBook Pro 2019</h4>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="images/pc-gamer-armada.jpg" alt="computadora-gamer" width="500px" class="imagen-de-producto">
+                            <div class="main-articulo">
+                                <p class="precio">$</p>
+                                <p class="descuento">15% off</p>
+                            <h4 class="descripcion">Computadora gamer, GTX 1060 Intel core i7 12gb RAM</h4>
+                        </article>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
