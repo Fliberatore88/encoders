@@ -19,7 +19,7 @@ Abogada de profesión, venezolana  viviendo en Argentina, amante de las frases d
 
 
 - ### Blanca Alicia Tovar
-Vivo en Argentina, Buenos Aires. Soy una entusiasta por la tecnología, siempre actualizándome con las herramientas disponibles en el mercado, hoy dia incursionando en el área de programación, mi formación académica está dirigida hacia Analista Tester.
+Venezolana en Argentina, Buenos Aires. Soy una entusiasta por la tecnología, siempre actualizándome con las herramientas disponibles en el mercado, hoy dia incursionando en el área de programación, mi formación académica está dirigida hacia Analista Tester.
 
 
 - ### Federico Liberatore
