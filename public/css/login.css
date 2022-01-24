@@ -33,25 +33,24 @@ header form {
     display: flex;
     max-width: 100%;
 }
-
-#search-lens {
-    position: relative;
+.container-search-and-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 50%;
+}
+#search-lens {
+    padding-right: 1.5em;
 }
 .fa-search {
     color: #000000;
-    position: absolute;
-    left: 150px;
     }
     .container-cart {
         z-index: 2;
-        top: 3px;
-        left: 90px;
-        position: relative;
     }
 .fa-shopping-cart {
-    color: #FFFFFF; 
-    position: absolute;
+    color: #000000; 
+    max-width: 20%;
 }
 ul {
     list-style: none;
@@ -64,6 +63,7 @@ li {
     height: 115px;
     width: 100%;
     margin-bottom: -4px;
+    display: none;
 }
 
 
