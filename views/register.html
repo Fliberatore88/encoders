@@ -1,119 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap"
-        rel="stylesheet">
-    <title>Encoders Registrate!</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <title>Encoders Registrate!</title>
+    </head>
 
-<body>
-    <header>
-        <div class="container-logo-searchbar-cart">
-            <div class="container-logo">
-                <a href="/">
-                    <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
-                </a>
-            </div>
-            <div class="container-search-and-cart">
-                <form action="/detalle-de-producto">
-                    <div id="search-lens">
-                        <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
-                    </div>
+    <body>
+        <header>
+            <div class="container-logo-searchbar-cart">
+                <div class="container-logo">
+                    <a href="/">
+                        <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
+                    </a>
+                </div>
+                <div class="container-search-and-cart">
+                    <form action="/detalle-de-producto">
+                        <div id="search-lens">
+                            <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
+                        </div>
 
-                    <div class="container-cart">
-                        <i class="fas fa-shopping-cart"></i>
+                        <div class="container-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
                     </div>
                 </div>
+            </form>
+
+            <nav
+                class="Header-Navbar">
+
+                <!-- Comienza el nav, listas dentro de  tags a -->
+                <ul class="nav">
+                    <a href="">
+                        <li>Mi cuenta</li>
+                    </a>
+                    <a href="/login">
+                        <li>Ingresá</li>
+                    </a>
+                    <a href="/carrito-de-compras">
+                        <li>Mi Carrito</li>
+                    </a>
+                </ul>
+                <!-- Termina el nav.-->
+            </nav>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
             </div>
-        </form>
-
-        <nav
-            class="Header-Navbar">
-
-            <!-- Comienza el nav, listas dentro de  tags a -->
-            <ul class="nav">
-                <a href="">
-                    <li>Mi cuenta</li>
-                </a>
-                <a href="/login">
-                    <li>Ingresá</li>
-                </a>
-                <a href="/carrito-de-compras">
-                    <li>Mi Carrito</li>
-                </a>
-            </ul>
-            <!-- Termina el nav.-->
-        </nav>
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="container-banner">
-            <div class="cuadrado-opacity">
-                <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
+            <div class="container-banner">
+                <div class="cuadrado-opacity">
+                    <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <form>
-            <label>Nombre: </label>
-            <input placeholder="Nombre" name="NombreDeUsuario">
-        
-
-        <div>
-
-            <label>Apellido: </label>
-            <input placeholder="Apellido" name="ApellidoDeUsuario">
-        
-        </div>
-            
-
-        <div>
-
-            <label>Fecha de nacimiento: </label>
-            <input type="date" name="FechaDeNacimientoUsuario"> 
-        
-        </div>
-            
-
-        <div>
-
-            <label>E-mail: </label>
-            <input placeholder="E-mail" name="EmailDelUsuario">
-        
-        </div>
-            
-
-        <div>
-
-            <label>Contraseña: </label>
-            <input placeholder="Contraseña" name="ContraseñaDeUsuario">
-        
-        </div>
-            
-
-        <div>
-
-            <label>Confirma tu contraseña: </label>
-            <input placeholder="confirma tu contraseña" name="ConfirmacionDeContraeña">
-
-        </div>
-
-        <button type="submit"> Registrate </button>
-            
-        </form>
-
-    </main>
+        <main>
+            <form>
+                <label>Nombre:
+                </label>
+                <input placeholder="Nombre" name="NombreDeUsuario">
 
 
-    <footer>
-        <div class="contenedor">
+                <div>
+
+                    <label>Apellido:
+                    </label>
+                    <input placeholder="Apellido" name="ApellidoDeUsuario">
+
+                </div>
+
+
+                <div>
+
+                    <label>Fecha de nacimiento:
+                    </label>
+                    <input type="date" name="FechaDeNacimientoUsuario">
+
+                </div>
+
+
+                <div>
+
+                    <label>E-mail:
+                    </label>
+                    <input placeholder="E-mail" name="EmailDelUsuario">
+
+                </div>
+
+
+                <div>
+
+                    <label>Contraseña:
+                    </label>
+                    <input placeholder="Contraseña" name="ContraseñaDeUsuario">
+
+                </div>
+
+
+                <div>
+
+                    <label>Confirma tu contraseña:
+                    </label>
+                    <input placeholder="confirma tu contraseña" name="ConfirmacionDeContraeña">
+
+                </div>
+
+                <button type="submit">
+                    Registrate
+                </button>
+
+            </form>
+
+        </main>
+
+
+        <footer>
+            <div class="contenedor">
                 <div class="contenido">
                     <div class="fila">
                         <div class="columna-del-footer">
@@ -146,20 +155,20 @@
                             <h4>Seguinos en redes</h4>
                             <ul ul class="redes-sociales">
                                 <li>
-                                    <a target=_blank href="https://es-la.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook logo" width="30px"></a>
+                                    <a target="_blank" href="https://es-la.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook logo" width="30px"></a>
                                 </li>
                                 <li>
-                                    <a target=_blank href="https://www.instagram.com/?hl=es-laole"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram logo" width="30px"></a>
+                                    <a target="_blank" href="https://www.instagram.com/?hl=es-laole"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram logo" width="30px"></a>
                                 </li>
                                 <li>
-                                    <a target=_blank href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png" alt="What's app logo" width="30px"></a>
+                                    <a target="_blank" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png" alt="What's app logo" width="30px"></a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
