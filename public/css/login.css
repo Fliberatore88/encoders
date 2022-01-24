@@ -42,6 +42,9 @@ header form {
 #search-lens {
     padding-right: 1.5em;
 }
+#searcher {
+    width: 100%;
+}
 .fa-search {
     color: #000000;
     }
