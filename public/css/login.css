@@ -85,8 +85,12 @@ li {
 .container-door {
     position: relative;
     margin-bottom: 2em;
-
     }
+.container-del-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
     .doorshut {
         width: 150px;
         height: 140px;
@@ -177,7 +181,7 @@ button {
 }
 .container-rememberme {
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     margin-bottom: 2em;
