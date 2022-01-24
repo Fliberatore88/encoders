@@ -105,18 +105,31 @@ form input {
     font-weight: 500;
     font-style: italic;
 }
+.container-username {
+    margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+}
+.container-username input {
+    flex: 1 1 auto;
+    background-color: #f8f5f2;
+    border-radius: 2%;
+    border: solid 0.5px #000000;
+    text-align: center;
+}
 button {
     width: 100%;
 }
 .container-rememberme {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 30px;
 }
 .container-rememberme label  {
     width: 70%;
+    text-align: center;
 }
 
 /* MAIN */
