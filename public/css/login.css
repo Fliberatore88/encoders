@@ -38,7 +38,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-wrap: wrap;
 }
 header form {
     display: flex;
@@ -49,6 +49,7 @@ header form {
     justify-content: center;
     align-items: center;
     max-width: 50%;
+    position: relative;
 }
 #search-lens {
     padding-right: 1.5em;
@@ -66,7 +67,21 @@ header form {
 .fa-shopping-cart {
     color: #f8f5f2; 
     max-width: 20%;
-
+}
+.container-titulo { 
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: -50px;
+}
+.titulo {
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+}
+.Header-Navbar {
+    margin-top: 1em;
 }
 .nav {
     list-style: none;
@@ -89,6 +104,7 @@ li {
     padding: 5px;
     border-radius: 5px;
 }
+
 .img-banner {
     height: 115px;
     width: 100%;
