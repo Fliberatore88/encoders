@@ -15,6 +15,17 @@ body {
 header {
     background-color: #0d47a1;
 }
+.all-but-banner {
+    background-color: #0d47a1;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+}
+.container-banner {
+    position: relative;
+    top: 240px;
+}
 
 .container-logo {
     max-width: 50%;
@@ -57,17 +68,32 @@ header form {
     max-width: 20%;
 
 }
-ul {
+.nav {
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5em;
 }
 li {
     text-decoration: none;
     color: #ccff90;
 }
+.burger-menu {
+    text-align: center;
+    color: white;
+    margin-bottom: 0.5em;
+}
+.fa-bars {
+    background-color: #39b54a;
+    padding: 5px;
+    border-radius: 5px;
+}
 .img-banner {
     height: 115px;
     width: 100%;
-    margin-bottom: -4px;
+    /*margin-bottom: -4px;*/
+    z-index: 2;
 }
 
 
@@ -75,6 +101,10 @@ li {
 
 
 /* MAIN */
+main {
+    position: relative;
+    top: 240px;
+}
 .caja-login {
     margin-top: 10em;
     margin-bottom: 10em;
@@ -217,3 +247,10 @@ font-size: 12px;
 }
 
 /* MAIN */
+
+/* FOOTER */
+
+footer {
+    top: 300px;
+    position: relative;
+}
