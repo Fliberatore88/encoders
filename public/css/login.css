@@ -14,17 +14,9 @@ body {
 /* HEADER */
 header {
     background-color: #0d47a1;
-}
-.all-but-banner {
-    background-color: #0d47a1;
-    position: fixed;
-    z-index: 3;
+    position: sticky;
     top: 0;
-    width: 100%;
-}
-.container-banner {
-    position: relative;
-    top: 240px;
+    z-index: 3;
 }
 
 .container-logo {
@@ -90,14 +82,15 @@ header form {
     align-items: center;
     margin-bottom: 1.5em;
 }
-li {
+.list-items-a {
     text-decoration: none;
-    color: #ccff90;
+    color: #FFFFFF;
+    font-size: 14px;
 }
 .burger-menu {
     text-align: center;
     color: white;
-    margin-bottom: 0.5em;
+    padding-bottom: 1em;
 }
 .fa-bars {
     background-color: #39b54a;
@@ -108,10 +101,8 @@ li {
 .img-banner {
     height: 115px;
     width: 100%;
-    /*margin-bottom: -4px;*/
     z-index: 2;
 }
-
 
 /* HEADER */
 
@@ -119,7 +110,6 @@ li {
 /* MAIN */
 main {
     position: relative;
-    top: 240px;
 }
 .caja-login {
     margin-top: 10em;
