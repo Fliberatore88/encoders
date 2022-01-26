@@ -110,6 +110,7 @@ header form {
 /* MAIN */
 main {
     position: relative;
+    margin-bottom: -30%;
 }
 .caja-login {
     margin-top: 10em;
