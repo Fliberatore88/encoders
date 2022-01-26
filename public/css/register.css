@@ -1,0 +1,73 @@
+.container_registro {
+    margin-top: 10em;
+    margin-bottom: 10em;
+    margin: 2em;
+    padding: 2em;
+    background-color: rgba (255,255,255,0.7);
+    border-radius: 10px;
+    padding-top: 1.5em;
+    box-shadow: 0 0 5px 2px #39b54a;
+    text-align: center;
+    
+}
+
+.container_registro_2{
+    margin-top: 10em;
+    margin-bottom: 10em;
+    margin: 2em;
+    padding: 2em;
+    background-color: rgba (255,255,255,0.7);
+    border-radius: 10px;
+    padding-top: 1.5em;
+    box-shadow: 0 0 5px 2px #39b54a;
+    text-align: center;
+    
+}
+
+.container_nombre{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}
+
+.apellido{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}
+
+.fechadenacimiento{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}
+
+.containere-mail{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}
+
+.contraseña{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}
+
+.confirmatucontraseña{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}

@@ -11,6 +11,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/css/login.css">
         <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/register.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <title>Encoders Registrate!</title>
     </head>
@@ -62,27 +63,31 @@
             </div>
         </header>
 
-        <main>
-            <div class="container-banner">
-                <div class="cuadrado-opacity">
-                    <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
-                </div>
+ <main>
+         
+    <div class="container_registro">
+         <div class="container-banner">
+             <div class="cuadrado-opacity">
+                 <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
+         </div class="container_registro_2">
             <form>
-                <label>Nombre:
+                <div class="container_nombre">
+                    
+                <label> Nombre: 
                 </label>
                 <input placeholder="Nombre" name="NombreDeUsuario">
+                
+                </div>
 
+                <div class="apellido">
 
-                <div>
-
-                    <label>Apellido:
-                    </label>
+                    <label>Apellido:</label>
                     <input placeholder="Apellido" name="ApellidoDeUsuario">
 
                 </div>
 
 
-                <div>
+                <div class="fechadenacimiento">
 
                     <label>Fecha de nacimiento:
                     </label>
@@ -91,7 +96,7 @@
                 </div>
 
 
-                <div>
+                <div class="containere-mail">
 
                     <label>E-mail:
                     </label>
@@ -100,7 +105,7 @@
                 </div>
 
 
-                <div>
+                <div class="contraseña">
 
                     <label>Contraseña:
                     </label>
@@ -109,7 +114,7 @@
                 </div>
 
 
-                <div>
+                <div class="confirmatucontraseña">
 
                     <label>Confirma tu contraseña:
                     </label>
@@ -117,11 +122,14 @@
 
                 </div>
 
-                <button type="submit">
+                <button type="submit" class="submit">
                     Registrate
                 </button>
 
             </form>
+        </div>
+
+        <div>
 
         </main>
 
