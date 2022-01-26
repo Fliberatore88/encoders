@@ -34,7 +34,7 @@ body {
 }
 
 @media screen and (min-width:768px){
-    .imagen-de.productos {
+    .imagen-de-producto {
         width: 150px;
         height: 100px;
     }
@@ -45,7 +45,7 @@ body {
 }
 
  @media screen and (min-width:1024px){
-    .imagen-de.productos {
+    .imagen-de-producto {
         width: 280px;
         height: 200px;
     }
