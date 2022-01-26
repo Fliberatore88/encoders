@@ -110,6 +110,7 @@ header form {
 /* MAIN */
 main {
     position: relative;
+    margin-bottom: -200px;    
 }
 .caja-login {
     margin-top: 10em;
@@ -137,7 +138,7 @@ main {
         color: #39b54a;
         border: 1px solid #39b54a;
         background-color: #FFF;
-        border-radius: 10%;
+        border-radius: 70%;
  
         display: flex;
         justify-content: center;
