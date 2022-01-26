@@ -12,6 +12,9 @@ body {
 
 /* aca empieza el main */
 
+main{
+    margin-bottom: -300px;
+}
 
 .contenedor-productos {
     width: 100%;
