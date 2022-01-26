@@ -7,62 +7,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200;1,300;1,400;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="/css/login.css">
         <link rel="stylesheet" href="/css/index.css">
         <link rel="stylesheet" href="/css/register.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <title>Encoders Registrate!</title>
     </head>
 
     <body>
         <header>
-            <div class="container-logo-searchbar-cart">
-                <div class="container-logo">
-                    <a href="/">
-                        <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
-                    </a>
-                </div>
-                <div class="container-search-and-cart">
-                    <form action="/detalle-de-producto">
-                        <div id="search-lens">
-                            <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
-                        </div>
-
-                        <div class="container-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
+            <div class="all-but-banner">
+                <div class="container-logo-searchbar-cart">
+                    <div class="container-logo">
+                        <a href="/">
+                            <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
+                        </a>
                     </div>
+                    <div class="container-search-and-cart">
+                        <form action="/detalle-de-producto">
+                            <div id="search-lens">
+                                <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
+                            </div>
+
+                            <div class="container-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="container-titulo">
+                            <h1 class="titulo">PC's por devs, para devs</h1>
+                            </div>
+                    </div>
+                   
+                </form>
+                <nav class="Header-Navbar">
+                    <!-- Comienza el nav, listas dentro de  tags a -->
+                    <ul class="nav">
+                        <a class="list-items-a" href="/login">
+                            <li>Mi cuenta</li>
+                        </a>
+                        <a class="list-items-a" href="/registro">
+                            <li>Registrate</li>
+                        </a>
+                        <a class="list-items-a" href="/carrito-de-compras">
+                            <li>Mi Carrito</li>
+                        </a>
+                    </ul>
+                    <!-- Termina el nav.-->
+                </nav>
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
                 </div>
-            </form>
-
-            <nav
-                class="Header-Navbar">
-
-                <!-- Comienza el nav, listas dentro de  tags a -->
-                <ul class="nav">
-                    <a href="">
-                        <li>Mi cuenta</li>
-                    </a>
-                    <a href="/login">
-                        <li>Ingresá</li>
-                    </a>
-                    <a href="/carrito-de-compras">
-                        <li>Mi Carrito</li>
-                    </a>
-                </ul>
-                <!-- Termina el nav.-->
-            </nav>
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
             </div>
+            </div>
+        </header>
+
+    <main>
+        <div class="container_registro">
             <div class="container-banner">
                 <div class="cuadrado-opacity">
                     <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
                 </div>
-            </div>
-        </header>
-
-        <main>
             <form>
                 <div class="container_nombre">
                     
@@ -121,6 +127,7 @@
                 </button>
 
             </form>
+        </div>
 
         </main>
 

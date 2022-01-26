@@ -20,52 +20,58 @@
 
 <body>
     <header>
-        <div class="container-logo-searchbar-cart">
-            <div class="container-logo">
-                <a href="/">
-                    <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
-                </a>
-            </div>
-            <form action="/detalle-de-producto">
-                <div id="search-lens">
-                    <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto"
-                        style="font-family:Arial, FontAwesome">
+        <div class="all-but-banner">
+            <div class="container-logo-searchbar-cart">
+                <div class="container-logo">
+                    <a href="/">
+                        <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
+                    </a>
                 </div>
+                <div class="container-search-and-cart">
+                    <form action="/detalle-de-producto">
+                        <div id="search-lens">
+                            <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
+                        </div>
 
-                <div class="container-cart">
-                    <i class="fas fa-shopping-cart"></i>
+                        <div class="container-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="container-titulo">
+                        <h1 class="titulo">PC's por devs, para devs</h1>
+                        </div>
                 </div>
-        </div>
-        </form>
-
-        <nav class="Header-Navbar">
-
-            <!-- Comienza el nav, listas dentro de  tags a -->
-            <ul class="nav">
-                <a href="">
-                    <li>Mi cuenta</li>
-                </a>
-                <a href="/login">
-                    <li>Ingresá</li>
-                </a>
-                <a href="/carrito-de-compras">
-                    <li>Mi Carrito</li>
-                </a>
-            </ul>
-            <!-- Termina el nav.-->
-        </nav>
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="container-banner">
-            <div class="cuadrado-opacity">
-                <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
+               
+            </form>
+            <nav class="Header-Navbar">
+                <!-- Comienza el nav, listas dentro de  tags a -->
+                <ul class="nav">
+                    <a class="list-items-a" href="/login">
+                        <li>Mi cuenta</li>
+                    </a>
+                    <a class="list-items-a" href="/registro">
+                        <li>Registrate</li>
+                    </a>
+                    <a class="list-items-a" href="/carrito-de-compras">
+                        <li>Mi Carrito</li>
+                    </a>
+                </ul>
+                <!-- Termina el nav.-->
+            </nav>
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
             </div>
+        </div>
         </div>
     </header>
 
     <body>
+        <div class="container-banner">
+            <div class="cuadrado-opacity">
+                <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
+            </div>
         <!-- primer imagen -->
+        <h1>Productos:</h1>
 
         <section class="contenedor-wrapper">
             <div class="contenedor-Productos">
@@ -77,7 +83,7 @@
                         <p>Core i5</p>
                         <strong>$399.999</strong>
                         <br>
-                        <button>Añadir</button>
+                        <button onclick="location.href='/carrito-de-compras'">Comprar ahora</button>
                     </div>
 
                 </div>
@@ -92,7 +98,7 @@
                         <p>M1 Chip 8-Nucleos CPU </p>
                         <strong>$269.999</strong>
                         <br>
-                        <button>Añadir</button>
+                        <button onclick="location.href='/carrito-de-compras'">Comprar ahora</button>
                     </div>
 
                 </div>
@@ -108,7 +114,7 @@
                         <p> Intel® Core™ i3-1115G4 Processor (6M Cache, up to 4.10 GHz)</p>
                         <strong>$79.999</strong>
                         <br>
-                        <button>Añadir</button>
+                        <button onclick="location.href='/carrito-de-compras'">Comprar ahora</button>
                     </div>
 
                 </div>
@@ -124,10 +130,12 @@
                         <p> Intel Core i3-1005G1 (1.2 GHz – 3.4 GHz, 4 MB cache, 2 nucleos) </p>
                         <strong>$78.999</strong>
                         <br>
-                        <button>Añadir</button>
+                        <button onclick="location.href='/carrito-de-compras'">Comprar ahora</button>
                         
                     </div>
+                    <div clas= Inspirado-en-lo-último-que-viste>
                 </div>
+
         </section>
         <footer>
             <div class="contenedor">
