@@ -84,26 +84,21 @@ ul{
 }
 
 .columna-del-footer{
-    width: 33%;
-    padding: 0 10px;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px 0 10px;
 }
 
-.columna-del-footer h4{
-    color: white;
-    margin-bottom: 20px;
-    font-weight: 500;
-    position: relative;
-}
-
-.columna-del-footer h4::before{
+.contenedor::before{
     content: '';
     position: absolute;
     left: 0;
-    bottom: -10px;
-    height: 2px;
+    top: 0px;
+    height: 5px;
     box-sizing: border-box;
     background-color: #ccff90;
-    width: 50px;
+    width: 100%;
 }
 
 .columna-del-footer ul li{
@@ -124,4 +119,38 @@ ul{
     padding-left: 5px;
 }
 
+.columna-del-footer-2 {
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.columna-del-footer-2 h4{
+    color: white;
+    font-weight: 500;
+    justify-content: center;
+    text-align: center;
+}
+
+.redes-sociales{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.redes-sociales li{
+    margin: 10px;
+}
+
+.copyright{
+    width: 100vw;
+    font-size: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
 /* aca termina el footer*/

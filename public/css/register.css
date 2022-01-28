@@ -1,3 +1,8 @@
+main {
+    position: relative;
+    margin-bottom: -270px;    
+}
+
 .container_registro {
     margin-top: 10em;
     margin-bottom: 10em;
@@ -49,6 +54,14 @@
 }
 
 .containere-mail{
+
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.7em;
+}
+
+.nombredeusuario{
 
     text-align: center;
     font-weight: 500;
