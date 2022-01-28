@@ -16,282 +16,96 @@
 
 <body>
     <header>
-        <div class="all-but-banner">
-            <div class="container-logo-searchbar-cart">
-                <div class="container-logo">
-                    <a href="/">
-                        <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
-                    </a>
-                </div>
-                <div class="container-search-and-cart">
-                    <form action="/detalle-de-producto">
-                        <div id="search-lens">
-                            <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
-                        </div>
-
-                        <div class="container-cart">
-                           <a href="/carrito-de-compras"> <i class="fas fa-shopping-cart"></i> </a>
-                        </div>
-                    </div>
-                    <div class="container-titulo">
-                        <h1 class="titulo">PC's por devs, para devs</h1>
-                        </div>
-                </div>
-               
-            </form>
-            <nav class="Header-Navbar">
-                <!-- Comienza el nav, listas dentro de  tags a -->
-                <ul class="nav">
-                    <a class="list-items-a" href="/login">
-                        <li>Mi cuenta</li>
-                    </a>
-                    <a class="list-items-a" href="/registro">
-                        <li>Registrate</li>
-                    </a>
-                    <a class="list-items-a" href="/carrito-de-compras">
-                        <li>Mi Carrito</li>
-                    </a>
-                </ul>
-                <!-- Termina el nav.-->
-            </nav>
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
+        <div class="container-logo-searchbar-cart">
+            <div class="container-logo">
+                <a href="/">
+                    <img class="img-logo" src="/images/logo-modelo-2.png" alt="Logo Encoders">
+                </a>
             </div>
+            <div class="container-search-and-cart">
+                <form action="/detalle-de-producto">
+                    <div id="search-lens">
+                        <input id="searcher" type="text" name="searcher" placeholder="&#xF002; Buscá tu producto" style="font-family:Arial, FontAwesome">
+                    </div>
+
+                    <div class="container-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <nav
+            class="Header-Navbar">
+
+            <!-- Comienza el nav, listas dentro de  tags a -->
+            <ul class="nav">
+                <a href="">
+                    <li>Mi cuenta</li>
+                </a>
+                <a href="/login">
+                    <li>Ingresá</li>
+                </a>
+                <a href="/carrito-de-compras">
+                    <li>Mi Carrito</li>
+                </a>
+            </ul>
+            <!-- Termina el nav.-->
+        </nav>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
         </div>
-        </div>
-    </header>
-     <!-- main -->
-     <main>
         <div class="container-banner">
             <div class="cuadrado-opacity">
                 <img class="img-banner" src="/images/teclado2.jpg" alt="Home Banner">
             </div>
-    <script>document.addEventListener('DOMContentLoaded', () => {
-           // Variables
-            const baseDeDatos = [
-                {
-                    id: 1,
-                    nombre: 'Monitor',
-                    precio: 50,
-                    imagen: 'Monitor.jpg'
-                },
-                {
-                    id: 2,
-                    nombre: 'Notebook',
-                    precio: 200,
-                    imagen: 'Notebook.jpg'
-                },
-                {
-                    id: 3,
-                    nombre: 'impresoras',
-                    precio: 220,
-                    imagen: 'impresoras.jpg'
-                },
-                {
-                    id: 4,
-                    nombre: 'cpu',
-                    precio: 30.6,
-                    imagen: 'cpu.jpg'
-                }
-  
-            ];
-  
-            let carrito = [];
-            const divisa = '$';
-            const DOMitems = document.querySelector('#items');
-            const DOMcarrito = document.querySelector('#carrito');
-            const DOMtotal = document.querySelector('#total');
-            const DOMbotonVaciar = document.querySelector('#boton-vaciar');
-  
-            // Funciones
-  
-            /**
-            * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
-            */
-            function renderizarProductos() {
-                baseDeDatos.forEach((info) => {
-                    // Estructura
-                    const miNodo = document.createElement('div');
-                    miNodo.classList.add('card', 'col-sm-4');
-                    // Body
-                    const miNodoCardBody = document.createElement('div');
-                    miNodoCardBody.classList.add('card-body');
-                    // Titulo
-                    const miNodoTitle = document.createElement('h5');
-                    miNodoTitle.classList.add('card-title');
-                    miNodoTitle.textContent = info.nombre;
-                    // Imagen
-                    const miNodoImagen = document.createElement('img');
-                    miNodoImagen.classList.add('img-fluid');
-                    miNodoImagen.setAttribute('src', info.imagen);
-                    // Precio
-                    const miNodoPrecio = document.createElement('p');
-                    miNodoPrecio.classList.add('card-text');
-                    miNodoPrecio.textContent = `${info.precio}${divisa}`;
-                    // Boton 
-                    const miNodoBoton = document.createElement('button');
-                    miNodoBoton.classList.add('btn', 'btn-primary');
-                    miNodoBoton.textContent = '+';
-                    miNodoBoton.setAttribute('marcador', info.id);
-                    miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-                    // Insertamos
-                    miNodoCardBody.appendChild(miNodoImagen);
-                    miNodoCardBody.appendChild(miNodoTitle);
-                    miNodoCardBody.appendChild(miNodoPrecio);
-                    miNodoCardBody.appendChild(miNodoBoton);
-                    miNodo.appendChild(miNodoCardBody);
-                    DOMitems.appendChild(miNodo);
-                });
-            }
-  
-            /**
-            * Evento para añadir un producto al carrito de la compra
-            */
-            function anyadirProductoAlCarrito(evento) {
-                // Anyadimos el Nodo a nuestro carrito
-                carrito.push(evento.target.getAttribute('marcador'))
-                // Actualizamos el carrito 
-                renderizarCarrito();
-  
-            }
-  
-            /**
-            * Dibuja todos los productos guardados en el carrito
-            */
-            function renderizarCarrito() {
-                // Vaciamos todo el html
-                DOMcarrito.textContent = '';
-                // Quitamos los duplicados
-                const carritoSinDuplicados = [...new Set(carrito)];
-                // Generamos los Nodos a partir de carrito
-                carritoSinDuplicados.forEach((item) => {
-                    // Obtenemos el item que necesitamos de la variable base de datos
-                    const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                        // ¿Coincide las id? Solo puede existir un caso
-                        return itemBaseDatos.id === parseInt(item);
-                    });
-                    // Cuenta el número de veces que se repite el producto
-                    const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                        // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
-                        return itemId === item ? total += 1 : total;
-                    }, 0);
-                    // Creamos el nodo del item del carrito
-                    const miNodo = document.createElement('li');
-                    miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-                    miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
-                    // Boton de borrar
-                    const miBoton = document.createElement('button');
-                    miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-                    miBoton.textContent = 'X';
-                    miBoton.style.marginLeft = '1rem';
-                    miBoton.dataset.item = item;
-                    miBoton.addEventListener('click', borrarItemCarrito);
-                    // Mezclamos nodos
-                    miNodo.appendChild(miBoton);
-                    DOMcarrito.appendChild(miNodo);
-                });
-               // Renderizamos el precio total en el HTML
-               DOMtotal.textContent = calcularTotal();
-            }
-  
-            /**
-            * Evento para borrar un elemento del carrito
-            */
-            function borrarItemCarrito(evento) {
-                // Obtenemos el producto ID que hay en el boton pulsado
-                const id = evento.target.dataset.item;
-                // Borramos todos los productos
-                carrito = carrito.filter((carritoId) => {
-                    return carritoId !== id;
-                });
-                // volvemos a renderizar
-                renderizarCarrito();
-            }
-  
-            /**
-             * Calcula el precio total teniendo en cuenta los productos repetidos
-             */
-            function calcularTotal() {
-                // Recorremos el array del carrito 
-                return carrito.reduce((total, item) => {
-                    // De cada elemento obtenemos su precio
-                    const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                        return itemBaseDatos.id === parseInt(item);
-                    });
-                    // Los sumamos al total
-                    return total + miItem[0].precio;
-                }, 0).toFixed(2);
-            }
-  
-            /**
-            * Varia el carrito y vuelve a dibujarlo
-            */
-            function vaciarCarrito() {
-                // Limpiamos los productos guardados
-                carrito = [];
-                // Renderizamos los cambios
-                renderizarCarrito();
-            }
-  
-            // Eventos
-            DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-  
-            // Inicio
-            renderizarProductos();
-            renderizarCarrito();
-          });
-      </script>
-      <div class="container">
-          <div class="row">
-              <!-- Elementos generados a partir del JSON -->
-              <main id="items" class="col-sm-8 row"></main> <!--Este main está raro-->
-              <!-- Carrito -->
-              <aside class="col-sm-4">
-                  <h2>Carrito de Compras</h2>
-                  <!-- Elementos del carrito -->
-                  <ul id="carrito" class="list-group"></ul>
-                  <hr>
-                  <!-- Precio total -->
-                  <p class="text-right">Total: <span id="total"></span>&dollar;</p>
-                  <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
-              </aside>
-          </div>
-      </div>
-
-    </main>
+        </div>
+    </header>
+     <!-- main -->
+     <main>
+        <img src="/images/carrito.jpg"
+        <style>
+        h1 {
+            text-align:center;
+            <title>Carrito de Compras</title>
+        }
+        </style>
+            <h2>{Productos</h2>
+            text-align:rigth;
+            <h1>Descripción del producto</h1>
+        </style>   
+        <section>
+            <h2>Total</h2>
+        </section>
+        <section>
+            text-
+            color: green
+            <h2>Comprar</h2>
+        </section>
+     </main>
      <!-- footer -->
-    <footer>
+     <footer>
         <div class="contenedor">
             <div class="contenido">
                 <div class="fila">
                     <div class="columna-del-footer">
-                        <h4>Categorias</h4>
-                        <ul class="categorias">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/login">Log in</a></li>
-                            <li><a href="/registro">Registrate</a></li>
-                            <li><a href="/detalle-de-producto">Detalle de productos</a></li>
-                            <li><a href="/carrito-de-compras">Carrito</a></li>
-                        </ul>
-                    </div>
-                    <div class="columna-del-footer">
-                        <h4>Contacto</h4>
                         <ul>
+                            <li><a href="#">Contacto</a></li>
                             <li><a href="#">Ayuda</a></li>
                         </ul>
                     </div>
-                    <div class="columna-del-footer">
+                    <div class="columna-del-footer-2">
                         <h4>Seguinos en redes</h4>
                         <ul ul class="redes-sociales">
-                                <li><a href="https://es-la.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook logo" width= "30px"></a></li>
-                                <li><a href="https://www.instagram.com/?hl=es-laole"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram logo" width= "30px"></a></li>
-                                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png" alt="What's app logo" width= "30px"></a></li>
+                                <li><a target=_blank href="https://es-la.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook logo" width= "30px" ></a></li>
+                                <li><a target=_blank href="https://www.instagram.com/?hl=es-laole"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram logo" width= "30px" ></a></li>
+                                <li><a target=_blank href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png" alt="What's app logo" width= "30px"></a></li>
                         </ul>
                     </div>
+                <div class="copyright">Copyright © por grupo 7</div>
                 </div>
             </div>
         </div>   
-    </footer>  
-
+    </footer>
 </body>
 </html>
