@@ -4,6 +4,9 @@ const formsController = {
   },
   login: (req,res) => {
     res.render ('./users/login')
+  },
+  admin: (req,res) => {
+    res.render ('./users/register')
   }
 }
 
