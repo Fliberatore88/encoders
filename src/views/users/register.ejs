@@ -1,0 +1,74 @@
+<%- include ('../partials/head.ejs') %>
+
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/carrousel.ejs') %>
+         <div class="container_registro_2">
+            <form action="/register.html" method="POST">
+                <div class="container_nombre">
+                    
+                <label> Nombre: 
+                </label>
+                <input placeholder="Nombre" name="NombreDeUsuario">
+                
+                </div>
+
+                <div class="apellido">
+
+                    <label>Apellido:</label>
+                    <input placeholder="Apellido" name="ApellidoDeUsuario">
+
+                </div>
+
+
+                <div class="fechadenacimiento">
+
+                    <label>Fecha de nacimiento:
+                    </label>
+                    <input type="date" name="FechaDeNacimientoUsuario">
+
+                </div>
+
+
+                <div class="containere-mail">
+
+                    <label>E-mail:
+                    </label>
+                    <input placeholder="E-mail" name="EmailDelUsuario">
+
+                </div>
+
+                <div class="nombredeusuario">
+                    <label>Nombre de usuario
+                    </label>
+                    <input placeholder="Nombre de Usuario" name="nombredeusuario">
+                    
+                </div>
+
+
+                <div class="contraseña">
+
+                    <label>Contraseña:
+                    </label>
+                    <input placeholder="Contraseña" name="ContraseñaDeUsuario">
+
+                </div>
+
+
+                <div class="confirmatucontraseña">
+
+                    <label>Confirma tu contraseña:
+                    </label>
+                    <input placeholder="confirma tu contraseña" name="ConfirmacionDeContraeña">
+
+                </div>
+
+                <button type="submit" class="submit">
+                    Registrate
+                </button>
+
+            </form>
+        </div>
+
+        <div>
+
+            <%- include('../partials/footer.ejs') %>
