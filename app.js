@@ -15,23 +15,6 @@ app.use ('/', mainRoutes);
 app.use ('/products', productsRoutes);
 app.use ('/users', formsRoutes);
 
-/*app.get ('/detalle-de-producto', (req,res) => {
-    res.sendFile (path.resolve(__dirname, 'views','productDetail.html'))
-})
-
-app.get ('/carrito-de-compras', (req,res) => {
-    res.sendFile (path.resolve(__dirname, 'views','productCar.html'))
-})
-
-app.get ('/registro', (req,res) => {
-    res.sendFile (path.resolve(__dirname, 'views','register.html'))
-})
-
-app.get ('/login', (req,res) => {
-    res.sendFile (path.resolve(__dirname, 'views','login.html'))
-})*/
-
-
 
 app.listen(3005, (err) => {
     if (err){
