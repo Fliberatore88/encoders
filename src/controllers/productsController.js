@@ -4,6 +4,12 @@ const productsController = {
   },
   car: (req,res) => {
     res.render ('./products/productCar')
+  },
+  addProduct: (req,res) => {
+    res.render ('./products/addProduct')
+  },
+  editProduct: (req,res) => {
+    res.render ('./products/editProduct')
   }
 }
 

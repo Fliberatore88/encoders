@@ -1,0 +1,74 @@
+<%- include ('../partials/head.ejs') %>
+
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/carrousel.ejs') %>
+         <div class="container_registro_2">
+            <form action="/products/" method="POST">
+                <div class="container_nombre">
+                    
+                <label> Nombre del producto: 
+                </label>
+                <input placeholder="Nombre del Producto" name="nombreDelProducto">
+                
+                </div>
+
+                <div class="descripcion">
+
+                    <label>Descripcion:</label>
+                    <input placeholder="Descripcion" name="descripcionDelProducto">
+
+                </div>
+
+
+                <div class="imagen">
+
+                    <label>Subí la imagen del producto:
+                    </label>
+                    <input type="file" name="imagen">
+
+                </div>
+
+
+                <div class="categoria">
+
+                    <label>Categoria:
+                    </label>
+                    <input placeholder="categoria" name="categoria">
+
+                </div>
+
+                <div class="nombredeusuario">
+                    <label>Nombre de usuario
+                    </label>
+                    <input placeholder="Nombre de Usuario" name="nombredeusuario">
+                    
+                </div>
+
+
+                <div class="contraseña">
+
+                    <label>Contraseña:
+                    </label>
+                    <input placeholder="Contraseña" name="ContraseñaDeUsuario">
+
+                </div>
+
+
+                <div class="confirmatucontraseña">
+
+                    <label>Confirma tu contraseña:
+                    </label>
+                    <input placeholder="confirma tu contraseña" name="ConfirmacionDeContraeña">
+
+                </div>
+
+                <button type="submit" class="submit">
+                    Registrate
+                </button>
+
+            </form>
+        </div>
+
+        <div>
+
+            <%- include('../partials/footer.ejs') %>
