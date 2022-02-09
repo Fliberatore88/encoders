@@ -34,7 +34,18 @@ margin-bottom: 30px;
     align-self: center;
     font-size: 12px;
     padding-left: 10px;
+   
+
 }
+.contenedor-envio {
+    color: #39b54a;
+   
+}
+
+.contenedor-cuotas{
+    color:rgb(108, 108, 245);
+}
+
 
 .contenedor-descripcion > button {
     font-size: 10px;
@@ -72,6 +83,7 @@ margin-bottom: 30px;
     }
  }
 
+ 
  h1 {
     color: black;
     font-size: 20px;
