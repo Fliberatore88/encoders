@@ -15,7 +15,7 @@ body {
 
 .contenedor-Productos {
  display: flex;
- flex-direction: column;
+ flex-direction:row;
  margin-bottom: 30px;
 
 
