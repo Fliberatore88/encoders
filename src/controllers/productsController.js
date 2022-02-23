@@ -19,6 +19,13 @@ const productsController = {
   },
   editProduct: (req,res) => {
     res.render ('./products/editProduct')
+
+  },
+  productCreateForm: (req, res)=> {
+    res.render ('./products/productCreateForm')
+
+
+    
   }
 }
 
