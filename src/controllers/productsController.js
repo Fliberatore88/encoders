@@ -1,15 +1,15 @@
 const productsController = {
-  detalle: (req,res) => {
+  detail: (req,res) => {
     const product = {
-    name: "uuuuuuuuuuuuuuu",
-    price: 123,
+    name: "Apple Macbook Pro",
+    price: 630.000,
     discount: 1,
-    category: "visited",
-    description: "sdasdasdasd ",
-    id: 18,
+    category: "Notebook",
+    description: "Nuevo Procesador de 6 núcleos a 2,6 GHz y512",
+    id: 1,
     image: "impresora.jpg"
     }
-    res.render('./products/productDetail2', {product})
+    res.render('./products/detailProduct', {product})
   },
   car: (req,res) => {
     res.render ('./products/productCar')
@@ -23,10 +23,11 @@ const productsController = {
   },
   productCreateForm: (req, res)=> {
     res.render ('./products/productCreateForm')
-
-
-    
+  },
+  products: (req, res)=> {
+    res.render ('./products/products')
   }
+
 }
 
 module.exports = productsController;
