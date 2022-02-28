@@ -85,12 +85,26 @@ body {
  }
 
  
- h1 {
-    color: black;
-    font-size: 20px;
+ .titleProducts {
+    display: flex;
+    color: #39b54a;
+    align-items: center;
     margin: 10px;
-   padding: 10px; ;
+    padding: 10px; 
+    text-decoration: underline;
+
     }
+
+    .titleProducts > h1 {
+        flex: 1;
+        color: #39b54a;
+
+    }
+
+ .buttonProducts{
+    width: 300px;
+
+ }
 
 footer {
    top: 0px !important;

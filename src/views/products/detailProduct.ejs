@@ -1,37 +1,41 @@
 <%- include ('../partials/head.ejs') %>
 
-    <%- include('../partials/header.ejs') %>
-	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%= product.name %> </h2> 
+	<%- include('../partials/header.ejs') %>
+		<section>
+			<!-- product detail -->
+			<div class="container products-wrapper">
+				<h2 class="products-title">Detalle del producto: <%= product.name %>
+				</h2>
 			</div>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<div class="col-12 col-lg-8">
+	
+			<div class="product-detail">
+	
+				<div class="product-imag">
 					<img src="/images/products/<%=product.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description">
 						<%= product.description %>
 					</p>
 				</div>
-				<div class="col-12 col-lg-4">
+				<div class="product-detail2">
 					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= product.name %></h2>
-						
-							<p class="product-detail-price small">
-								<span>$<%= product.price%></span>
-								
-								<b><%= product.discount%></b>
-							</p>
-							<p class="product-detail-price">
-								$<%= product.discount%>
-							</p>
-							<p class="product-detail-price">
-								$<%= product.discount%>
-							</p>
-
+						<h2 class="product-detail-title">
+							<%= product.name %>
+						</h2>
+	
+						<p class="product-detail-price small">
+							<span>$<%= product.price%></span>
+	
+							<b>
+								<%= product.discount%>
+							</b>
+						</p>
+						<p class="product-detail-price">
+							$<%= product.discount%>
+						</p>
+						<p class="product-detail-price">
+							$<%= product.discount%>
+						</p>
+	
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>
@@ -42,28 +46,26 @@
 								<p>Retiro gratis en locales del vendedor</p>
 							</li>
 						</ul>
-
+	
 						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
 						<hr>
-
+	
 						<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
 						<form action="/products/<%= product.id %>/edit" method="GET" style="display: inline-flex">
-							<button type="submit" class="action-button edit">EDITAR PRODUCTO</button>
+							<button type="submit" class="action-button edit">Editar Productos</button>
 						</form>
-							<form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
+						<form action="/products/<%= product.id %>?_method=DELETE" method="POST"
+							style="display: inline-flex">
+							<button type="submit" class="action-button delete">Eliminar</button>
 						</form>
+
+						<form action="/products/<%= product.id %>/edit" method="GET" style="display: inline-flex">
+							<button type="submit" class="action-button edit">Añaddir a carrito</button>
+						</form>
+
 					</article>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /product detail -->
-
+		</section>
 	
-	<!-- /footer -->
-
-	<%- include ('../partials/footer.ejs') %>
-
-</body>	
-</html>
+		<%- include('../partials/footer.ejs') %>
