@@ -4,7 +4,8 @@
 		<section>
 			<!-- product detail -->
 			<div class="container products-wrapper">
-				<h2 class="products-title">Detalle del producto: <%= product.name %>
+				 <h2 class="products-title"> Detalle del producto: 
+					<!-- <%= product.name %> - -->
 				</h2>
 			</div>
 	
@@ -13,7 +14,7 @@
 				<div class="product-imag">
 					<img src="/images/products/<%=product.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description">
-						<%= product.description %>
+						<!-- <%= product.description %> -->
 					</p>
 				</div>
 				<div class="product-detail2">
@@ -22,19 +23,21 @@
 							<%= product.name %>
 						</h2>
 	
-						<p class="product-detail-price small">
+						<div class="product-detail-price small">
 							<span>$<%= product.price%></span>
 	
 							<b>
 								<%= product.discount%>
 							</b>
-						</p>
-						<p class="product-detail-price">
+						</div>
+
+						<div class="product-detail-price-1">
 							$<%= product.discount%>
-						</p>
-						<p class="product-detail-price">
+						</div>
+
+						<div class="product-detail-price-2">
 							$<%= product.discount%>
-						</p>
+						</div>
 	
 						<ul class="actions-list">
 							<li>
