@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const mainRoutes = require ('./src/routes/mainRoutes');
-const formsRoutes = require ('./src/routes/formsRoutes');
+const usersRoutes = require ('./src/routes/usersRoutes');
 const productsRoutes = require ('./src/routes/productsRoutes')
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -13,7 +13,7 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 
 app.use ('/', mainRoutes);
 app.use ('/products', productsRoutes);
-app.use ('/users', formsRoutes);
+app.use ('/users', usersRoutes);
 
 
 app.listen(3005, (err) => {
