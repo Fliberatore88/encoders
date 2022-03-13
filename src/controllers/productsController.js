@@ -25,7 +25,7 @@ const productsController = {
     res.render ('./products/productCreateForm')
   },
   products: (req, res)=> {
-    console.log(req)
+
     res.render ('./products/products')
   }
 
