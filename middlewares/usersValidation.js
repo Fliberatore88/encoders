@@ -9,7 +9,7 @@ const usersRegister = [
   check('password').trim().notEmpty().withMessage('Debes completar el campo password').bail().isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres').matches('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$').withMessage('La contraseña debe contener al menos 8 caracteres, 1 mayúscula, 1 número,1 minúscula y un caracter especial.'),
   check('confirmPassword').isEmpty().withMessage('Debes completar el campo confirmar password').bail().custom((value, { req }) => {
     if (value !== req.body.password) {
-        throw new Error('Password confirmation does not match password');
+        throw new Error('La confirmación del password no coincide con el password');
         }
         return true
       })
