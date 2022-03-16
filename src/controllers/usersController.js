@@ -18,7 +18,18 @@ const usersController = {
 
   },
   login: (req,res) => {
-    res.render ('./users/login')
+    res.render('./users/login')
+  },
+
+  enterLogin: (req,res) => {
+
+    const errors = validationResult(req)
+    if (errors.isEmpty()){
+      res.render('./users/login', {msg: 'Mensaje todo OK',old: req.body})
+  } else {
+      res.render('./users/login', {errors: errors.mapped(), old: req.body})
+  }
+    
   },
   admin: (req,res) => {
     res.render ('./users/register')

@@ -9,7 +9,8 @@ router.get ('/', usersController.index)
 
 /*** LOGIN USER ***/
 
-router.get ('/login',upload.single('image'),usersValidation, usersController.login)
+router.get ('/login', usersController.login)
+router.post ('/login', usersValidation, usersController.enterLogin)
 
 /*** REGISTER USER ***/
 router.get ('/register', usersController.register)
