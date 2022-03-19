@@ -11,7 +11,7 @@ router.post ('/login', usersValidation, usersController.enterLogin)
 
 /*** REGISTER USER ***/
 router.get ('/register', usersController.register)
-router.post ('register', upload.single('image'), usersValidation, usersController.create)
+router.post ('/register', upload.single('image'), usersValidation, usersController.create)
 
 /*** GET ONE USER ***/
 router.get('/:id/', usersController.detail);

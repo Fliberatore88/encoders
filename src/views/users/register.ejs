@@ -3,40 +3,64 @@
 <%- include('../partials/header.ejs') %>
             <section>
                 <div>
-                    <form action="/register" method="POST">
+                    <form action="/users/register" method="POST" enctype="multipart/form-data">
                         <div class="caja-register">
                             <h1 class="register-title">Registrate</h1>
-                            <div class="container-first-name">
-                                <label for="first-name"></label>
-                                <input type="text" name="first-name" id="first-name" placeholder="Ingresá tu nombre">
+                            <div class="container-name">
+                                <label for="name"></label>
+                                <input type="text" name="name" id="name" placeholder="Ingresá tu nombre" value="<%= locals.old && old.name %>">
+                                <% if ( locals.errors && locals.errors.name ) { %>
+                                    <%= errors.name.msg %>  
+                             
+                                   <% } %>
                             </div>
-                            <div class="container-last-name">
-                                <label for="last-name"></label>
-                                <input type="text" name="last-name" id="last-name" placeholder="Ingresá tu apellido">
+                            <div class="container-lastname">
+                                <label for="lastname"></label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Ingresá tu apellido" value="<%= locals.old && old.lastname %>">
+                                <% if ( locals.errors && locals.errors.lastname ) { %>
+                                    <%= errors.lastname.msg %>  
+                             
+                                   <% } %>
                             </div>
                             <div class="container-username">
                                 <label for="username"></label>
-                                <input type="text" name="username" id="username" placeholder="Ingresá tu nombre de usuario">
+                                <input type="text" name="username" id="username" placeholder="Ingresá tu nombre de usuario" value="<%= locals.old && old.username %>">
+                                <% if ( locals.errors && locals.errors.username ) { %>
+                                    <%= errors.username.msg %>  
+                             
+                                   <% } %>
                             </div>
                              <div class="container-password">
                                         <label for="password"></label>
-                                        <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña">
+                                        <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña" >
+                                        <% if ( locals.errors && locals.errors.password ) { %>
+                                            <%= errors.password.msg %>  
+                                     
+                                           <% } %>
                                         <div class="eyelash-slash">
                                             <i class="far fa-eye-slash"></i>
                                         </div>
                                     </div>
                                 <div class="container-email">
                                     <label for="email"></label>
-                                    <input type="email" name="email" id="email" placeholder="Ingresá tu email">
+                                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" value=" <%= locals.old && old.email %>">
+                                    <% if ( locals.errors && locals.errors.email ) { %>
+                                        <%= errors.email.msg %>  
+                                 
+                                       <% } %>   
                                 </div>
                                 <div class="container-avatar">
                                     <label for="avatar"></label>
                                     <input type="file" name="avatar" id="avatar" placeholder="Subí tu foto de perfil">
+                                    <% if ( locals.errors && locals.errors.avatar ) { %>
+                                        <%= errors.avatar.msg %>  
+                                 
+                                       <% } %>
                                 </div>
                             </div>
                             <div class="container-button">
                                 <button type="submit">
-                                    <span class="text">Ingresar</span>
+                                    <span class="text">Registrarme</span>
                                 </button>
                             </div>
                             <div class="container-rememberme">

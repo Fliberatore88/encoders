@@ -174,13 +174,13 @@ main {
     margin-bottom: 1.5em;
 }
 
-.container-first-name {
+.container-name {
     margin-bottom: 8px;
     width: 100%;
     display: flex;
     text-align: center;
 }
-.container-first-name input {
+.container-name input {
     background-color: #f8f5f2;
     border-radius: 3px;
     border: solid 1px #ddd;
@@ -190,16 +190,16 @@ main {
     font-weight: 100;
     text-align: center;
 }
-.container-first-name input::placeholder {
+.container-name input::placeholder {
   color: rgba(57, 181, 74, 0.4);
 }
-.container-last-name {
+.container-lastname {
     margin-bottom: 8px;
     width: 100%;
     display: flex;
     text-align: center;
 }
-.container-last-name input {
+.container-lastname input {
     background-color: #f8f5f2;
     border-radius: 3px;
     border: solid 1px #ddd;
@@ -209,7 +209,7 @@ main {
     font-weight: 100;
     text-align: center;
 }
-.container-last-name input::placeholder {
+.container-lastname input::placeholder {
   color: rgba(57, 181, 74, 0.4);
 }
 .container-email {
