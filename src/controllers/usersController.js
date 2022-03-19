@@ -1,3 +1,5 @@
+const { validationResult } = require("express-validator")
+const User = require ('../../MODELOPRUEBA/User')
 const usersController = {
   index: (req,res) => {
 
@@ -6,7 +8,14 @@ const usersController = {
     res.render('./users/register')
   },
   create: (req,res) => {
+  const validationResult = validationResult(req)
 
+  if (validationResult.errors.length > 0 ){
+
+    return res.render ('register', { errors: validationResult.mapped(), old: req.body })
+  }
+    User.create(req.body)
+    return res.send('OK se guardó el usuario')
   },
   detail: (req,res) => {
 

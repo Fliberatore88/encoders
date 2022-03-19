@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "first_name": "Alva",
     "last_name": "Jobe",
@@ -6,7 +7,8 @@
     "password": "tTnkwnpVLkI",
     "image": "http://dummyimage.com/106x100.png/ff4444/ffffff",
     "username": "ajobe0"
-  }, {
+  },
+  {
     "id": 2,
     "first_name": "Fancie",
     "last_name": "Tett",
@@ -14,7 +16,8 @@
     "password": "xxRC77MrO",
     "image": "http://dummyimage.com/250x100.png/dddddd/000000",
     "username": "ftett1"
-  }, {
+  },
+  {
     "id": 3,
     "first_name": "Fletch",
     "last_name": "Insole",
@@ -22,7 +25,8 @@
     "password": "c0uDtk",
     "image": "http://dummyimage.com/114x100.png/dddddd/000000",
     "username": "finsole2"
-  }, {
+  },
+  {
     "id": 4,
     "first_name": "Pet",
     "last_name": "Seed",
@@ -30,7 +34,8 @@
     "password": "bEGZaGshTlj",
     "image": "http://dummyimage.com/177x100.png/dddddd/000000",
     "username": "pseed3"
-  }, {
+  },
+  {
     "id": 5,
     "first_name": "Vail",
     "last_name": "Ida",
@@ -38,7 +43,8 @@
     "password": "xRUrezQLih5g",
     "image": "http://dummyimage.com/166x100.png/dddddd/000000",
     "username": "vida4"
-  }, {
+  },
+  {
     "id": 6,
     "first_name": "Lydie",
     "last_name": "Cuningham",
@@ -46,7 +52,8 @@
     "password": "5vzVyPF",
     "image": "http://dummyimage.com/194x100.png/cc0000/ffffff",
     "username": "lcuningham5"
-  }, {
+  },
+  {
     "id": 7,
     "first_name": "Lanita",
     "last_name": "Pavyer",
@@ -54,7 +61,8 @@
     "password": "vQYZVxr7bMRM",
     "image": "http://dummyimage.com/179x100.png/ff4444/ffffff",
     "username": "lpavyer6"
-  }, {
+  },
+  {
     "id": 8,
     "first_name": "Kennith",
     "last_name": "Hughlin",
@@ -62,7 +70,8 @@
     "password": "1IQ2OnB3gPXM",
     "image": "http://dummyimage.com/117x100.png/cc0000/ffffff",
     "username": "khughlin7"
-  }, {
+  },
+  {
     "id": 9,
     "first_name": "Alysa",
     "last_name": "Cuphus",
@@ -70,7 +79,8 @@
     "password": "Nt33Fn",
     "image": "http://dummyimage.com/180x100.png/ff4444/ffffff",
     "username": "acuphus8"
-  }, {
+  },
+  {
     "id": 10,
     "first_name": "Constancy",
     "last_name": "Shory",
@@ -78,7 +88,8 @@
     "password": "87Re4kzKmtI",
     "image": "http://dummyimage.com/235x100.png/ff4444/ffffff",
     "username": "cshory9"
-  }, {
+  },
+  {
     "id": 11,
     "first_name": "See",
     "last_name": "Gaggen",
@@ -86,7 +97,8 @@
     "password": "WEnAVwKHCE",
     "image": "http://dummyimage.com/221x100.png/cc0000/ffffff",
     "username": "sgaggena"
-  }, {
+  },
+  {
     "id": 12,
     "first_name": "Osbourne",
     "last_name": "MacAloren",
@@ -94,7 +106,8 @@
     "password": "UjWFXcQRHr",
     "image": "http://dummyimage.com/197x100.png/dddddd/000000",
     "username": "omacalorenb"
-  }, {
+  },
+  {
     "id": 13,
     "first_name": "Mathias",
     "last_name": "Stanning",
@@ -102,7 +115,8 @@
     "password": "Op2S4ddKdWj",
     "image": "http://dummyimage.com/174x100.png/dddddd/000000",
     "username": "mstanningc"
-  }, {
+  },
+  {
     "id": 14,
     "first_name": "Betti",
     "last_name": "Easseby",
@@ -110,7 +124,8 @@
     "password": "91i3D0m",
     "image": "http://dummyimage.com/145x100.png/ff4444/ffffff",
     "username": "beassebyd"
-  }, {
+  },
+  {
     "id": 15,
     "first_name": "Anni",
     "last_name": "Fitkin",
@@ -118,7 +133,8 @@
     "password": "Ouk4jWQ",
     "image": "http://dummyimage.com/218x100.png/cc0000/ffffff",
     "username": "afitkine"
-  }, {
+  },
+  {
     "id": 16,
     "first_name": "Lion",
     "last_name": "Drewry",
@@ -126,7 +142,8 @@
     "password": "VZ8GB90mZ",
     "image": "http://dummyimage.com/217x100.png/5fa2dd/ffffff",
     "username": "ldrewryf"
-  }, {
+  },
+  {
     "id": 17,
     "first_name": "Noel",
     "last_name": "Diggles",
@@ -134,7 +151,8 @@
     "password": "9fOprob",
     "image": "http://dummyimage.com/190x100.png/5fa2dd/ffffff",
     "username": "ndigglesg"
-  }, {
+  },
+  {
     "id": 18,
     "first_name": "Rorke",
     "last_name": "Vaun",
@@ -142,7 +160,8 @@
     "password": "jSSQXH",
     "image": "http://dummyimage.com/242x100.png/cc0000/ffffff",
     "username": "rvaunh"
-  }, {
+  },
+  {
     "id": 19,
     "first_name": "Padraig",
     "last_name": "Coton",
@@ -150,7 +169,8 @@
     "password": "TIKs9wH",
     "image": "http://dummyimage.com/175x100.png/5fa2dd/ffffff",
     "username": "pcotoni"
-  }, {
+  },
+  {
     "id": 20,
     "first_name": "Jemmy",
     "last_name": "Abrahamson",
@@ -158,4 +178,5 @@
     "password": "PbMESCKyQR42",
     "image": "http://dummyimage.com/128x100.png/cc0000/ffffff",
     "username": "jabrahamsonj"
-  }]
+  }
+]

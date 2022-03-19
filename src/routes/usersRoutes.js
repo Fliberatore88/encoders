@@ -4,9 +4,6 @@ const upload = require ('../../middlewares/multer')
 const usersValidation = require ('../../middlewares/usersValidation')
 const usersController = require ('../controllers/usersController')
 
-/*** GET ALL USERS ***/
-router.get ('/', usersController.index)
-
 /*** LOGIN USER ***/
 
 router.get ('/login', usersController.login)

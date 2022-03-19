@@ -1,74 +1,70 @@
 <%- include ('../partials/head.ejs') %>
 
 <%- include('../partials/header.ejs') %>
+            <section>
+                <div>
+                    <form action="/register" method="POST">
+                        <div class="caja-register">
+                            <h1 class="register-title">Registrate</h1>
+                            <div class="container-first-name">
+                                <label for="first-name"></label>
+                                <input type="text" name="first-name" id="first-name" placeholder="Ingresá tu nombre">
+                            </div>
+                            <div class="container-last-name">
+                                <label for="last-name"></label>
+                                <input type="text" name="last-name" id="last-name" placeholder="Ingresá tu apellido">
+                            </div>
+                            <div class="container-username">
+                                <label for="username"></label>
+                                <input type="text" name="username" id="username" placeholder="Ingresá tu nombre de usuario">
+                            </div>
+                             <div class="container-password">
+                                        <label for="password"></label>
+                                        <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña">
+                                        <div class="eyelash-slash">
+                                            <i class="far fa-eye-slash"></i>
+                                        </div>
+                                    </div>
+                                <div class="container-email">
+                                    <label for="email"></label>
+                                    <input type="email" name="email" id="email" placeholder="Ingresá tu email">
+                                </div>
+                                <div class="container-avatar">
+                                    <label for="avatar"></label>
+                                    <input type="file" name="avatar" id="avatar" placeholder="Subí tu foto de perfil">
+                                </div>
+                            </div>
+                            <div class="container-button">
+                                <button type="submit">
+                                    <span class="text">Ingresar</span>
+                                </button>
+                            </div>
+                            <div class="container-rememberme">
+                                <label for="remember-me"></label>
+                                <p class="p-rememberme">
+                                    Recordar mi cuenta</p>
+                                <div class="container-checkbox">
+                                    <input type="checkbox" name="remember-me" id="remember-me" checked>
+                                </div>
+                            </div>
 
-         <div class="container_registro_2">
-            <form action="/register.html" method="POST">
-                <div class="container_nombre">
-                    
-                <label> Nombre: 
-                </label>
-                <input placeholder="Nombre" name="name">
-                
-                </div>
+                        </form>
+                        <div class="container-retrieve-register">
+                            <div class="container-retrieve-password">
+                                <p>Recuperar mi contraseña</p>
+                            </div>
+                            <div class="container-register">
+                                <a href="/users/register">
+                                    <p>Registrarme</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="container-securty-policies">
+                            <p>Política de privacidad</p>
+                        </div>
+                    </div>
+               
+                </article>
+            </section>
 
-                <div class="apellido">
-
-                    <label>Apellido:</label>
-                    <input placeholder="Apellido" name="lastname">
-
-                </div>
-
-
-                <div class="fechadenacimiento">
-
-                    <label>Fecha de nacimiento:
-                    </label>
-                    <input type="date" name="birthdate">
-
-                </div>
-
-
-                <div class="containere-mail">
-
-                    <label>E-mail:
-                    </label>
-                    <input placeholder="E-mail" name="email">
-
-                </div>
-
-                <div class="nombredeusuario">
-                    <label>Nombre de usuario
-                    </label>
-                    <input placeholder="Nombre de Usuario" name="username">
-                    
-                </div>
-
-
-                <div class="contraseña">
-
-                    <label>Contraseña:
-                    </label>
-                    <input placeholder="Contraseña" name="password">
-
-                </div>
-
-
-                <div class="confirmatucontraseña">
-
-                    <label>Confirma tu contraseña:
-                    </label>
-                    <input placeholder="confirma tu contraseña" name="confirmPassword">
-
-                </div>
-
-                <button type="submit" class="submit">
-                    Registrate
-                </button>
-
-            </form>
-        </div>
-
-        <div>
-
-            <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
