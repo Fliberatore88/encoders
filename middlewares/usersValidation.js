@@ -6,7 +6,8 @@ const usersValidation = [
  
   check('email').trim().notEmpty().withMessage('Debes completar el campo email').bail().isEmail().normalizeEmail().withMessage('Debe ser un email correcto'),
   check('username').notEmpty().withMessage('El nombre de usuario no puede estar vacío').bail().isString().withMessage('El usuario debe contener solo letras').bail().isLength({min: 8, max:20}).withMessage('El usuario debe tener al menos 8 caracteres y no más de 20'),
-  check('password').trim().notEmpty().withMessage('Debes completar el campo password').bail().isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres')/*.matches('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$', 'g').withMessage('La contraseña debe contener al menos 8 caracteres, 1 mayúscula, 1 número,1 minúscula y un caracter especial.'),
+  check('password').trim().notEmpty().withMessage('Debes completar el campo password').bail().isLength({min: 8}).withMessage('La contraseña debe contener al menos 8 caracteres')
+  /*.matches('^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$', 'g').withMessage('La contraseña debe contener al menos 8 caracteres, 1 mayúscula, 1 número,1 minúscula y un caracter especial.'),
   check('confirmPassword').isEmpty().withMessage('Debes completar el campo confirmar password').bail().custom((value, { req }) => {
     if (value !== req.body.password) {
         throw new Error('La confirmación del password no coincide con el password');

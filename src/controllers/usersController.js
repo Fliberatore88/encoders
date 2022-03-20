@@ -11,10 +11,11 @@ const usersController = {
   create: (req,res) => {
     
   const resultValidation = validationResult(req)
-
+  console.log(req.file)
   if (resultValidation.errors.length > 0 ){
     return res.render('./users/register', { errors: resultValidation.mapped(), old: req.body })
   }
+  console.log(req.file)
     User.create(req.body)
     return res.send('OK se guardó el usuario')
   },
