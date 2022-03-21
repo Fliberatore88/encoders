@@ -49,23 +49,26 @@
 								<p>Retiro gratis en locales del vendedor</p>
 							</li>
 						</ul>
-	
-						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-	
-						<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
-						<form action="/products/<%= product.id %>/edit" method="GET" style="display: inline-flex">
-							<button type="submit" class="action-button edit">Editar Productos</button>
-						</form>
-						
-						<form action="/products/<%= product.id %>?_method=DELETE" method="POST"
-							style="display: inline-flex">
-							<button type="submit" class="action-button delete">Eliminar</button>
-						</form>
 
-						<form action="/products/<%= product.id %>/edit" method="GET" style="display: inline-flex">
-							<button type="submit" class="action-button edit">Añaddir a carrito</button>
-						</form>
+						<hr>
+
+						<button type="submit" class="action-button edit">Comprar ahora</button>
+
+						<hr>
+						<div class="contenedor-botones-productos" style="display: flex">
+							<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
+							<form action="/products/<%= product.id %>/edit" method="GET">
+								<button type="submit" class="action-button edit">Editar Productos</button>
+							</form>
+						
+							<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+								<button type="submit" class="action-button delete">Eliminar Productos</button>
+							</form>
+						
+							<form action="/products/<%= product.id %>/edit" method="GET">
+								<button type="submit" class="action-button edit">Añaddir a carrito</button>
+							</form>
+						</div>
 
 					</article>
 				</div>

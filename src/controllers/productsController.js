@@ -5,9 +5,9 @@ const productsController = {
     price: 630.000,
     discount: 1,
     category: "Notebook",
-    description: "Nuevo Procesador de 6 núcleos a 2,6 GHz y512",
+    description: "La nueva MacBook Pro ofrece a los usuarios más pro un rendimiento revolucionario. Elige entre el chip M1 Pro o el aún más potente M1 Max para resolver las tareas profesionales más exigentes con una excepcional duración de la batería(1). Además, la MacBook Pro trae una espectacular pantalla Liquid Retina XDR de 14 pulgadas y puertos avanzados para sacarle más provecho que nunca",
     id: 1,
-    image: "impresora.jpg"
+    image: "Apple Macbook Pro.jpg"
     }
     res.render('./products/detailProduct', {product})
   },
