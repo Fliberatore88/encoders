@@ -12,7 +12,9 @@ body {
     align-items: center;
     flex-direction: column;
     border: 30px;
-    padding: 10px;
+    padding: 20px;
+    box-shadow: 30px;
+   
 
 }
 
@@ -22,3 +24,25 @@ body {
 
 }
 
+
+.products-title {
+    text-align:initial;
+
+}
+
+.fa-credit-card {
+    color: #39b54a;
+    display: block;
+    border-radius: 20px;
+    transition: initial;
+    transition-property:initial
+}
+
+.fa-store{
+    color: #39b54a;
+    display: block;
+    border-radius: 20px;
+    transition:all;
+    transition-property:initial;
+
+}
