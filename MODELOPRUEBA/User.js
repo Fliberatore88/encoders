@@ -33,10 +33,8 @@ const User =  {
 
   create: function (userData) {
     let allUsers =  this.findAll();
-    let userImage = req.file.filename
     let newUser = {
       id: this.generateId(),
-      userImage,
       ...userData
     }
     allUsers.push(newUser);
