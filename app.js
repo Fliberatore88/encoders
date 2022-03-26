@@ -8,7 +8,7 @@ const mainRoutes = require ('./src/routes/mainRoutes');
 const usersRoutes = require ('./src/routes/usersRoutes');
 const productsRoutes = require ('./src/routes/productsRoutes');
 const session = require('express-session');
-
+const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
 
 const app = express();
 
@@ -21,7 +21,9 @@ app.use(session ({
     resave: false,
     saveUninitialized: false
  }))
+ 
 app.use(cookieParser());
+app.use (userLoggedMiddleware);
 app.use(methodOverride('_method'))
 
 
