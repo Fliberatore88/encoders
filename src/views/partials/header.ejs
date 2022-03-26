@@ -15,7 +15,7 @@
                 <li><a href="/products">Products</a></li>
                 
                 <% if (locals.isLogged) { %>
-                    <img src="/images/users/<%= locals.userLogged.image %>" width="70" style="border-radius: 50%" alt="User img">
+                    <img src="/images/users/<%= locals.userLogged.image %>" width="80" style="border-radius: 100%" alt="User img">
                     <li>Hola <%= locals.userLogged.name %></li>
                     <li><a href="/users/userProfile">Profile</a></li>
                     <li><a href="/users/logout">Logout</a></li>
