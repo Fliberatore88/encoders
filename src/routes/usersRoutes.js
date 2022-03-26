@@ -1,10 +1,11 @@
 const express = require ('express');
 const router = express.Router();
-const upload = require ('../../middlewares/multer')
-const usersValidation = require ('../../middlewares/usersValidation')
-const usersController = require ('../controllers/usersController')
-const guestMiddleware = require ('../../middlewares/guestMiddleware')
-const authMiddleware = require ('../../middlewares/authMiddleware')
+const path = require('path')
+const upload = require (path.resolve('./middlewares/multer'))
+const usersValidation = require (path.resolve('./middlewares/usersValidation'))
+const usersController = require (path.resolve('./src/controllers/usersController'))
+const guestMiddleware = require (path.resolve('./middlewares/guestMiddleware'))
+const authMiddleware = require (path.resolve('./middlewares/authMiddleware'))
 
 /*** LOGIN USER ***/
 router.get('/logout', usersController.logout)

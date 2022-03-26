@@ -1,6 +1,6 @@
 const { validationResult } = require("express-validator")
-
-const User = require ('../../MODELOPRUEBA/User')
+const path = require('path')
+const User = require (path.resolve('./MODELOPRUEBA/User'))
 const bcryptjs = require ('bcryptjs')
 const usersController = {
   index: (req,res) => {

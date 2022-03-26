@@ -1,4 +1,5 @@
-const User = require('../MODELOPRUEBA/User')
+const path = require('path')
+const User = require(path.resolve('./MODELOPRUEBA/User'))
 
 function userLoggedMiddleware (req,res,next) {
     
