@@ -186,7 +186,7 @@
     "username": "feduff",
     "password": "$2a$10$8SvV3JY3ifV98FIX/sp.7.2qWe.8F5FciHc4gzBWxZ37DTqS5HMle",
     "email": "federico.liberatore88@gmail.com",
-    "remember-me": "on",
+    "remember_me": "on",
     "image": "feduff-avatar-1648206010084.jpg"
   }
 ]
