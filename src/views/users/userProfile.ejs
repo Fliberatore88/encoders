@@ -1,0 +1,12 @@
+<%- include ('../partials/head.ejs') %>
+
+<%- include('../partials/header.ejs') %>
+  <h1>Hola <%= user.name%></h1>
+
+  <img src="/images/users/<%= user.image %>" alt="imagen del usuario">
+
+  <div>
+    <%= user.email %>
+  </div>
+</body>
+</html>

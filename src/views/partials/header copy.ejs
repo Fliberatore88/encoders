@@ -10,22 +10,29 @@
                     <button type="submit"><img src="/images/search.png"></button>
                 </form>
             </div>
-            <ul class="nav-bar">
+            <ul class="navbar-nav align-items-center">
                 <li><a href="/">Home</a></li>
                 <li><a href="/products">Products</a></li>
-                
                 <% if (locals.isLogged) { %>
-                    <img src="/images/users/<%= locals.userLogged.image %>" width="80" style="border-radius: 100%" alt="User img">
-                    <li>Hola <%= locals.userLogged.name %></li>
-                    <li><a href="/users/userProfile">Profile</a></li>
-                    <li><a href="/users/logout">Logout</a></li>
+                    <li class="nav-item dropwdown">
+                        <a class="nav-link dropwdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/images/users/default.png" width="40" style="border-radius: 100%" alt="User img">
+                            Hola <%= locals.user %>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/users/userProfile">Profile</a>
+                    <li><hr class="dropwdown-divider"></li>
+                    <a class="dropdown-item" href="/users/logout">Logout</a>
+                </ul>
+            </li>
                 <% } else { %>
-                <li class="nav-item"><a class="nav-link" href="/users/login">Log In</a></li>
-                <li class="nav-item"><a class="nav-link" href="/users/register">Register</a></li>
+                <li><a href="/users/login">Log In</a></li>
+                <li><a href="/users/register">Register</a></li>
                 <% } %>
                 <li><a href="/products/car">carrito</a></li>
                 
             </ul>
+       
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>

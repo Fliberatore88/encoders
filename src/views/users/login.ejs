@@ -3,17 +3,22 @@
 <%- include('../partials/header.ejs') %>
             <section>
                 <article>
-                    <form action="/login" method="POST">
+                    <form action="/users/login" method="POST">
                         <div class="caja-login">
                             <div class="container-del-container">
                                 <div class="container-door">
                                     <img class="doorshut" src="/images/doorshut.png" alt="Door Shut">
                                 </div>
                             </div>
-                            <h1 class="login-title">Inicia Sesión con tu Usuario</h1>
+                            <h1 class="login-title">Inicia Sesión con tu Mail</h1>
                             <div class="container-username">
-                                <label for="username"></label>
-                                <input type="text" name="username" id="username" placeholder="Ingresá tu nombre de usuario">
+                                <label for="email"></label>
+                                <input type="text" name="email" id="email" placeholder="Ingresá tu mail">
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="text-danger">
+                                        <%= errors.email.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="container-password">
                                 <label for="password"></label>
@@ -31,11 +36,11 @@
                                 </button>
                             </div>
                             <div class="container-rememberme">
-                                <label for="remember-me"></label>
+                                <label for="remember_me"></label>
                                 <p class="p-rememberme">
                                     Recordar mi cuenta</p>
                                 <div class="container-checkbox">
-                                    <input type="checkbox" name="remember-me" id="remember-me" checked>
+                                    <input type="checkbox" name="remember_me" id="remember_me" checked>
                                 </div>
                             </div>
 
