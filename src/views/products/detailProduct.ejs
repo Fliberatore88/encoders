@@ -12,7 +12,7 @@
 			<div class="product-detail">
 	
 				<div class="product-imag">
-					<img src="/images/products/<%=product.image %>" alt="product image" class="product-detail-img">
+					<img src="/images/<%=product.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description">
 						<!-- <%= product.description %> -->
 					</p>
@@ -36,7 +36,7 @@
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
+								<p>Pagá en  <%= product.monthly_payments%> cuotas sin interes</p>
 							</li>
 							
 							<li>
@@ -52,7 +52,7 @@
 						<hr>
 						<div class="contenedor-botones-productos" style="display: flex">
 							<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
-							<form action="/products/<%= product.id %>/edit" method="GET">
+							<form action="/products/<%= product.id %>/editProduct" method="GET">
 								<button type="submit" class="action-button edit">Editar Productos</button>
 							</form>
 						

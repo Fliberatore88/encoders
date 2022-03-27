@@ -1,15 +1,18 @@
+const fs = require('fs');
+const path = require('path');
+const { setTimeout } = require('timers/promises');
+
+const productsFilePath = path.join(__dirname, '../../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+console.log(products);
+
 const productsController = {
   detail: (req,res) => {
-    const product = {
-    name: "Apple Macbook Pro",
-    price:  630.000,
-    discount: 20,
-    category: "Notebook",
-    description: "La nueva MacBook Pro ofrece a los usuarios más pro un rendimiento revolucionario. Elige entre el chip M1 Pro o el aún más potente M1 Max para resolver las tareas profesionales más exigentes con una excepcional duración de la batería(1). Además, la MacBook Pro trae una espectacular pantalla Liquid Retina XDR de 14 pulgadas y puertos avanzados para sacarle más provecho que nunca",
-    id: 1,
-    image: "Apple Macbook Pro.jpg"
-    }
-    res.render('./products/detailProduct', {product})
+    const idToFind = req.params.id
+		const product = products.find ( p =>  p.id == idToFind )
+		
+		return res.render ('./products/detailProduct', { product })
   },
   car: (req,res) => {
     res.render ('./products/productCar')
@@ -17,17 +20,96 @@ const productsController = {
   addProduct: (req,res) => {
     res.render ('./products/addProduct')
   },
+  // Create -  Method to store
+	store: (req, res) => {
+    console.log('producto agr', req.body);
+		const newProduct =  req.body;
+    newProduct.category = "Pc de escritorio";
+    newProduct.brand = "Intel";
+    newProduct.discount = 10;
+    newProduct.shipping = "Envío gratis";
+    newProduct.monthly_payments = 12;
+		const newProductImage = req.file;
+	
+		if (req.file && newProductImage.size < 3145728) {
+			
+    productsController.createNewProduct(newProduct,newProductImage)	
+		
+		products.push (newProduct)
+
+		productsController.dbReWrite()
+
+		res.redirect ('/products')
+
+	} else if (req.file && newProductImage.size > 3145729) {
+		res.send('El archivo es demasiado pesado')
+	} else {
+		res.send ('No adjuntaste ninguna imagen')
+	}
+	},
+  createNewProduct: function (newProduct,newProductImage) {
+
+		newProduct.id = productsController.asignIdToProduct();
+		newProduct.price = Number(newProduct.price);
+		newProduct.image = newProductImage.filename;
+		
+		if (newProduct.discount == '') {
+			newProduct.discount = 0
+		} else {
+			newProduct.discount = Number(newProduct.discount)
+		}
+	},
+	asignIdToProduct: function () {
+		return products[products.length -1].id +1;
+	},
+  dbReWrite() { 
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+	},
   editProduct: (req,res) => {
-    res.render ('./products/editProduct')
+    const idToFind = req.params.id
+		const product = products.find ( p =>  p.id == idToFind )
+		
+		return res.render ('./products/editProduct', {product})
 
   },
   productCreateForm: (req, res)=> {
     res.render ('./products/productCreateForm')
   },
   products: (req, res)=> {
+    // Sleep for refresh after delete or update
+    var waitTill = new Date(new Date().getTime() + 1.5 * 1000);
+    while(waitTill > new Date()){}
 
-    res.render ('./products/products')
-  }
+    res.render ('./products/products',{products})
+  },
+  // Delete - Delete one product from DB
+	deletetProduct: (req, res) => {
+		const idToFind = req.params.id
+		const deletedProducts = products.filter ( p =>  p.id != idToFind )
+		
+		fs.writeFileSync(productsFilePath, JSON.stringify(deletedProducts, null, 2))
+		
+    // await new Promise(resolve => setTimeout(resolve, 50));
+    res.redirect('/products')
+	},
+  // Update - Method to update
+	update: (req, res) => {
+		
+    const idToFind = req.params.id
+    const productIndex = products.findIndex(product => product.id == idToFind )
+    const editedProduct = req.body;
+
+    products[productIndex].name = editedProduct.name;
+    products[productIndex].description = editedProduct.description;
+    products[productIndex].price = Number(editedProduct.price);
+ 
+    if (req.file) {
+    products[productIndex].image = req.file.filename;
+    }
+    productsController.dbReWrite()
+
+  return res.redirect('/products')
+},
 
 }
 
