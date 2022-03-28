@@ -2,12 +2,21 @@
 
 	<%- include('../partials/header.ejs') %>
 		<section>
+			
+            
 			<!-- product detail -->
 			<div class="container products-wrapper">
 				 <h2 class="products-title"> Detalle del producto: 
 					<!-- <%= product.name %> - -->
 				</h2>
-			</div>
+
+			
+
+			<div class="buttonListProduct">
+                <button onclick="location.href='/products'">Listado de productos</button>
+            </div>
+		</div>
+			
 	
 			<div class="product-detail">
 	
@@ -61,7 +70,7 @@
 							</form>
 						
 							<form action="/products/<%= product.id %>/edit" method="GET">
-								<button type="submit" class="action-button edit">Añaddir a carrito</button>
+							<button onclick="location.href='/products/car'">Añadir a carrito</button>
 							</form>
 						</div>
 
