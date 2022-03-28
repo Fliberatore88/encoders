@@ -18,9 +18,9 @@ const usersController = {
   }
   
     let userByEmailInDB = User.findByField('email', req.body.email);
-    let userByUsernameDB = User.findByField('username', req.body.username);
+    //let userByUsernameDB = User.findByField('username', req.body.username);
 
-      if  (userByEmailInDB || userByUsernameDB ) {
+      if  (userByEmailInDB) {
         return res.render('./users/register', { errors:{
           email: {
             msg: 'Este email ya está registrado'
