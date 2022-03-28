@@ -7,7 +7,6 @@ const usersController = {
 
   },
   register: (req,res) => {
-
     res.render('./users/register')
   },
   create: (req,res) => {

@@ -188,5 +188,15 @@
     "email": "federico.liberatore88@gmail.com",
     "remember_me": "on",
     "image": "feduff-avatar-1648206010084.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Gabriela",
+    "lastname": "Martinez",
+    "username": "garemar",
+    "password": "$2a$10$TBWC72XkCtY8c58iJe.xB.OeI.MOLJZKI78YffFscwCQvtvOM412G",
+    "email": "garemar0908@gmail.com",
+    "remember-me": "on",
+    "image": "garemar-avatar-1648393101872.jpeg"
   }
 ]
