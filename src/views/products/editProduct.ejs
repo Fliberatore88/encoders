@@ -2,72 +2,55 @@
 
 <%- include('../partials/header.ejs') %>
 
-         <div class="container_registro_2">
-            <form action="/products/" method="POST">
-                <div class="container_nombre">
-                    
-                <label> Nombre del producto: 
-                </label>
-                <input placeholder="Nombre del Producto" name="nombreDelProducto">
-                
-                </div>
-
-                <div class="descripcion">
-
-                    <label>Descripcion:</label>
-                    <input placeholder="Descripcion" name="descripcionDelProducto">
-
-                </div>
-
-
-                <div class="imagen">
-
-                    <label>Subí la imagen del producto:
-                    </label>
-                    <input type="file" name="imagen">
-
-                </div>
-
-
-                <div class="categoria">
-
-                    <label>Categoria:
-                    </label>
-                    <input placeholder="categoria" name="categoria">
-
-                </div>
-
-                <div class="nombredeusuario">
-                    <label>Nombre de usuario
-                    </label>
-                    <input placeholder="Nombre de Usuario" name="nombredeusuario">
-                    
-                </div>
-
-
-                <div class="contraseña">
-
-                    <label>Contraseña:
-                    </label>
-                    <input placeholder="Contraseña" name="ContraseñaDeUsuario">
-
-                </div>
-
-
-                <div class="confirmatucontraseña">
-
-                    <label>Confirma tu contraseña:
-                    </label>
-                    <input placeholder="confirma tu contraseña" name="ConfirmacionDeContraeña">
-
-                </div>
-
-                <button type="submit" class="submit">
-                    Registrate
-                </button>
-
-            </form>
+<div class="container_registro_2">
+    <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="container_nombre">
+            
+        <label> Nombre del producto: 
+        </label>
+        <input placeholder="Nombre del Producto" name="name" value="<%= product.name%>">
+        
         </div>
+
+        <div class="descripcion">
+
+            <label>Descripcion:</label>
+            <input placeholder="Descripcion" name="description" value="<%= product.description%>">
+
+        </div>
+
+
+        <div class="imagen">
+
+            <label>Subí la imagen del producto:
+            </label>
+            <input type="file" id="image" name="image">
+
+        </div>
+
+
+        <!-- <div class="categoria">
+
+            <label>Categoria:
+            </label>
+            <input placeholder="categoria" name="categoria">
+
+        </div> -->
+
+        <div class="precio">
+            <label>Precio
+            </label>
+            <input placeholder="Precio" name="price" value="<%= product.price%>">
+            
+        </div>
+
+
+        <button type="submit" class="submit">
+            Editar
+        </button>
+
+    </form>
+</div>
 
         <div>
 

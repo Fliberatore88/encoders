@@ -12,7 +12,7 @@
 			<div class="product-detail">
 	
 				<div class="product-imag">
-					<img src="/images/products/<%=product.image %>" alt="product image" class="product-detail-img">
+					<img src="/images/<%=product.image %>" alt="product image" class="product-detail-img">
 					<p class="product-detail-description">
 						<!-- <%= product.description %> -->
 					</p>
@@ -24,48 +24,46 @@
 						</h2>
 	
 						<div class="product-detail-price small">
-							<span>$<%= product.price%></span>
+							<p> Precio $<%= product.price%></p>
 	
-							<b>
-								<%= product.discount%>
-							</b>
 						</div>
 
-						<div class="product-detail-price-1">
-							$<%= product.discount%>
+						<div class="product-detail-price">
+							<p> Descuento $<%= product.discount%></p>
 						</div>
 
-						<div class="product-detail-price-2">
-							$<%= product.discount%>
-						</div>
 	
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
+								<p>Pagá en  <%= product.monthly_payments%> cuotas sin interes</p>
 							</li>
+							
 							<li>
 								<i class="fas fa-store"></i>
 								<p>Retiro gratis en locales del vendedor</p>
 							</li>
 						</ul>
-	
-						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-	
-						<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
-						<form action="/products/<%= product.id %>/edit" method="GET" style="display: inline-flex">
-							<button type="submit" class="action-button edit">Editar Productos</button>
-						</form>
-						
-						<form action="/products/<%= product.id %>?_method=DELETE" method="POST"
-							style="display: inline-flex">
-							<button type="submit" class="action-button delete">Eliminar</button>
-						</form>
 
-						<form action="/products/<%= product.id %>/edit" method="GET" style="display: inline-flex">
-							<button type="submit" class="action-button edit">Añaddir a carrito</button>
-						</form>
+						<hr>
+
+						<button type="submit" class="action-button edit">Comprar ahora</button>
+
+						<hr>
+						<div class="contenedor-botones-productos" style="display: flex">
+							<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
+							<form action="/products/<%= product.id %>/editProduct" method="GET">
+								<button type="submit" class="action-button edit">Editar Productos</button>
+							</form>
+						
+							<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+								<button type="submit" class="action-button delete">Eliminar Productos</button>
+							</form>
+						
+							<form action="/products/<%= product.id %>/edit" method="GET">
+								<button type="submit" class="action-button edit">Añaddir a carrito</button>
+							</form>
+						</div>
 
 					</article>
 				</div>

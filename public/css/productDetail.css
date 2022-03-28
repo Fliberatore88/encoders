@@ -7,40 +7,42 @@ body {
 
 }
 
-.products-wrapper {
-    width: 100%;
-    justify-content: center;
+.product-detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 30px;
+    padding: 20px;
+    box-shadow: 30px;
    
 
 }
 
-.product-detail{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 20px;  
-}
 
-.product-imag {
-    display:  flex;
-    flex: 100%;
-    justify-content: center;
-    width: 500%;
+.product-detail2 {
+    text-align: center;
 
 }
 
 
-.product-detail2{
-    display:  flex;
-    flex: 50%;
-    justify-content: right;
-}
-
-.product-detail-title{
-    width: 300%;
+.products-title {
+    text-align:initial;
 
 }
 
-.product-detail-info{
-    width: 500%;
-    justify-content: right;
+.fa-credit-card {
+    color: #39b54a;
+    display: block;
+    border-radius: 20px;
+    transition: initial;
+    transition-property:initial
+}
+
+.fa-store{
+    color: #39b54a;
+    display: block;
+    border-radius: 20px;
+    transition:all;
+    transition-property:initial;
+
 }
