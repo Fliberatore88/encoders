@@ -4,7 +4,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-console.log(products);
+//console.log(products); Te edité este console.log para que no lo traiga en cada cosa pero lo dejo acá por si lo seguís usando más adelante.
 
 const productsController = {
   detail: (req,res) => {
