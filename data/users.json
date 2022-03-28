@@ -198,5 +198,15 @@
     "email": "garemar0908@gmail.com",
     "remember-me": "on",
     "image": "garemar-avatar-1648393101872.jpeg"
+  },
+  {
+    "id": 23,
+    "name": "asd",
+    "lastname": "asd",
+    "username": "asdasd",
+    "password": "$2a$10$L6sHk3nKrGDYird8q.qDt.iyRRn6ZcebiiZ3liKoKZNwO.jijY5Xy",
+    "email": "f.liberatore@hotmail.com",
+    "remember-me": "on",
+    "image": "default.png"
   }
 ]

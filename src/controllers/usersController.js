@@ -31,14 +31,22 @@ const usersController = {
         }, old: req.body })
       }
    
-
+      if  ( req.file && req.file.filename) {
     let userToCreate =  {
     ...req.body,
     password: bcryptjs.hashSync(req.body.password, 10),
     image: req.file.filename,
   }
-    let userCreated = User.create(userToCreate)
-    return res.redirect('/users/login')
+} else {
+  let userToCreate =  {
+    ...req.body,
+    password: bcryptjs.hashSync(req.body.password, 10),
+    image: 'default.png',
+  }
+  let userCreated = User.create(userToCreate)
+  return res.redirect('/users/login')
+}
+   
   },
   edit: (req,res) => {
 
