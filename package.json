@@ -1,4 +1,24 @@
 {
+
+  "name": "encoders",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador Encoders",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fliberatore88/grupo_7_Encoders.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fliberatore88/grupo_7_Encoders/issues"
+  },
+  "homepage": "https://github.com/Fliberatore88/grupo_7_Encoders.git#readme",
+
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
