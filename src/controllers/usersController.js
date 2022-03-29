@@ -24,13 +24,9 @@ const usersController = {
         return res.render('./users/register', { errors:{
           email: {
             msg: 'Este email ya está registrado'
-          },
-          username: {
-            msg: 'Este username ya está registrado'
           }
         }, old: req.body })
       }
-   
       if  (req.file && req.file.filename) {
     let userToCreate =  {
     ...req.body,
@@ -38,7 +34,7 @@ const usersController = {
     image: req.file.filename,
   }
   let userCreated = User.create(userToCreate)
-  return res.redirect('/users/login')
+  return res.redirect('/users/userProfile') //ponerlo en sesion para redirigir al perfil con un async y await.
 } else {
   let userToCreate =  {
     ...req.body,
@@ -46,9 +42,9 @@ const usersController = {
     image: 'default.png',
   }
   let userCreated = User.create(userToCreate)
-  return res.redirect('/users/login')
-}
-   
+  return res.redirect('/users/userProfile')
+
+   } 
   },
   edit: (req,res) => {
 
@@ -92,7 +88,9 @@ const usersController = {
     })
   },
   profile: (req,res) => {
-    console.log(req.cookies.userEmail)
+    //console.log(req.cookies.userEmail)
+    /*findOne acá
+    if (req.params.id !== )*/
     res.render('./users/userProfile',  {
       user: req.session.userLogged
     })
