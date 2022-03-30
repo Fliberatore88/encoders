@@ -238,17 +238,5 @@
     "discount": 25,
     "shipping": "Envío gratis",
     "monthly_payments": 12
-  },
-  {
-    "name": "test",
-    "description": "test descripcion",
-    "price": 11,
-    "category": "Pc de escritorio",
-    "brand": "Intel",
-    "discount": 10,
-    "shipping": "Envío gratis",
-    "monthly_payments": 12,
-    "id": 21,
-    "image": "test-image-1648508268329.jpg"
   }
 ]
