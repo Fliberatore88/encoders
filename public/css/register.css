@@ -231,13 +231,13 @@ main {
 .container-email input::placeholder {
   color: rgba(57, 181, 74, 0.4);
 }
-.container-username {
+.container-confirmPassword {
     margin-bottom: 8px;
     width: 100%;
     display: flex;
     text-align: center;
 }
-.container-username input {
+.container-confirmPassword input {
     background-color: #f8f5f2;
     border-radius: 3px;
     border: solid 1px #ddd;
@@ -247,7 +247,7 @@ main {
     font-weight: 100;
     text-align: center;
 }
-.container-username input::placeholder {
+.container-confirmPassword input::placeholder {
   color: rgba(57, 181, 74, 0.4);
 }
 .container-avatar {
