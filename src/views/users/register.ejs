@@ -22,14 +22,7 @@
                              
                                    <% } %>
                             </div>
-                            <div class="container-username">
-                                <label for="username"></label>
-                                <input type="text" name="username" id="username" placeholder="Ingresá tu nombre de usuario" value="<%= locals.old && old.username %>">
-                                <% if ( locals.errors && locals.errors.username ) { %>
-                                    <%= errors.username.msg %>  
-                             
-                                   <% } %>
-                            </div>
+                           
                              <div class="container-password">
                                         <label for="password"></label>
                                         <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña" >
@@ -40,6 +33,14 @@
                                         <div class="eyelash-slash">
                                             <i class="far fa-eye-slash"></i>
                                         </div>
+                                    </div>
+                                    <div class="container-confirmPassword">
+                                        <label for="confirmPassword"></label>
+                                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Ingresá nuevamente tu contraseña" value="<%= locals.old && old.confirmPassword %>">
+                                        <% if ( locals.errors && locals.errors.confirmPassword ) { %>
+                                            <%= errors.confirmPassword.msg %>  
+                                     
+                                           <% } %>
                                     </div>
                                 <div class="container-email">
                                     <label for="email"></label>

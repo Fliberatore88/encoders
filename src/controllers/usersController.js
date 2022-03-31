@@ -9,7 +9,7 @@ const usersController = {
   },
   create: (req, res) => {
     const resultValidation = validationResult(req);
-    //console.log(req.file)
+    console.log(req.body)
     if (resultValidation.errors.length > 0) {
       return res.render("./users/register", {
         errors: resultValidation.mapped(),
@@ -33,6 +33,7 @@ const usersController = {
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
+      //confirmPassword:bcryptjs.hashSync(req.body.confirmPassword, 10),
       image: "default.png"
     }
     if (req.file && req.file.filename) {
