@@ -1,16 +1,16 @@
 [
   {
-    "id": 1,
-    "name": "Apple-Macbook-Pro",
-    "description": "Nuevo Procesador de 6 núcleos a 2,6 GHz y512.",
-    "category": "Notebook",
-    "image": "Apple Macbook Pro.jpg",
-    "price": "630.000",
-    "brand": "Apple",
-    "discount": 0,
-    "shipping": "Envío gratis",
-    "monthly_payments": 12
-  },
+  "id": 1,
+  "name": "Apple-Macbook-Pro",
+  "description": "Nuevo Procesador de 6 núcleos a 2,6 GHz y512.",
+  "category": "Notebook",
+  "image": "Apple Macbook Pro.jpg",
+  "price": "630.000",
+  "brand": "Apple",
+  "discount": 0,
+  "shipping": "Envío gratis",
+  "monthly_payments": 12
+},
   {
     "id": 2,
     "name": "Apple-Macbook-Pro",
