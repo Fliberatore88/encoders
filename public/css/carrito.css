@@ -7,7 +7,7 @@ body {
 
 }
 
-.contenedor-wrapper  {
+/* .contenedor-wrapper  {
     width: 100%;
     justify-content: center;
     display: flex;
@@ -83,6 +83,20 @@ footer {
    top: 0px !important;
 }
 
+
+
+     */
+
+     .table-responsive{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 30px;
+        padding: 50px;
+        box-shadow: 30px;
+        height: 600px;
+   
+     }
 
 
     

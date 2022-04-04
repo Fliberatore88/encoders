@@ -3,7 +3,7 @@
 <%- include('../partials/header.ejs') %>
 
 
-        <img src="/images/carrito.jpg"
+     <!-- <img src="/images/carrito.jpg"
         <style>
         h1 {
             text-align:center;
@@ -20,7 +20,44 @@
         <section>
             text-
             color: green
-            <h2>Comprar</h2>
-        </section>
+            <h2>Comprar</h2> -->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Producto</th>
+                      <th scope="col">Precio</th>
+                      <th scope="col">Cantidad</th>
+                      <th scope="col">Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                    
+                      <th scope="row"><a href="/public/images/products/Apple Macbook Pro.jpg"><i class="bi bi-x-circle"></i></a></th>
+                      <td class="carro--destacada">Apple Macbook Pro</td>
+                      <td class="carro__precio">$630.000</td>
+                      <td><input type="number" value="1" min="0" max="999" step="1"></td>
+                      <td class="carro__precio">$630.000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="/public/images/products/Notebook Dell Inspiron 3505 Negra.jpg"><i class="bi bi-x-circle"></i></a></th>
+                      <td class="carro--destacada">Notebook Dell Inspiron</td>
+                      <td class="carro__precio">$114.999</td>
+                      <td><input type="number" value="1" min="1" max="999" step="1"></td>
+                      <td class="carro__precio">$114.999</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"></th>
+                      <td></td>
+                      <td></td>
+                      <td class="carro__total-titulo carro--destacada carro--centrada">TOTAL:</td>
+                      <td class="carro__total-valor">$744.999</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a href="finalizar-compra.html" class="carro__button-comprar btn btn-default">Finalizar la Compra</a>
 
      <%- include('../partials/footer.ejs') %>
