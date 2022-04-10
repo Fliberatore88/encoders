@@ -30,12 +30,15 @@ const usersController = {
         old: req.body,
       });
     }
+    
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
       //confirmPassword:bcryptjs.hashSync(req.body.confirmPassword, 10),
       image: "default.png"
     }
+    delete userToCreate.confirmPassword
+    
     if (req.file && req.file.filename) {
       userToCreate.image = req.file.filename;
     }
