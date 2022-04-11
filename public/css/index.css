@@ -14,7 +14,7 @@ body {
 
 /* aca empieza el main */
 
-main{
+/* main{
     margin-bottom: -300px;
 }
 
@@ -61,12 +61,13 @@ main{
     100% {
         left: -400%;
     }
-}
+} */
 
-.contenedor-productos {
+/* .contenedor-productos {
     width: 100%;
     justify-content: center;
     display: flex;
+    flex-direction:row;
 }
 
 .product-list-1{
@@ -168,10 +169,10 @@ main{
    
 /* aca termina el main */
 
-/* aca empieza el footer */
+/* /aca empieza el footer  */
 
 
-footer{
+ footer{
     background-color: #0d47a1;
     padding: 20px 0;
 }
@@ -179,6 +180,10 @@ footer{
 .contenedor{
     width: 100%;
     margin: auto;
+}
+
+h2{
+    color: #39b54a !important;
 }
 
 ul{
@@ -258,6 +263,234 @@ ul{
     display: flex;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: white
 }
-/* aca termina el footer*/
+
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        width: 200px;
+    }
+
+
+    .contenedor{
+        width: 100%;
+        margin: auto;
+    }
+    
+    
+       
+    
+        .product-img{
+            width: 100%; 
+        }
+    
+    
+        h1 {
+            color:blue;
+           
+        }
+        
+        
+        body{
+        font-family: 'Roboto', sans-serif;
+        background-color:#ebebeb;
+        
+        }
+        
+        .logo-banner {
+            width: 100%;
+        }
+        
+        .burger-menu {
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+        .burger-menu i {
+            background-color: rgb(41, 41, 223);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .precio{
+           font-size: 18px;
+        }
+        
+        .Descuestos{
+            font-size: 16px;
+             width: 70%;
+        }
+        
+        .Descripciones{
+            font-size: 16px;
+            font-weight: bold; 
+        }
+        
+        h4 {
+            font-weight: bold;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        
+        
+        .container-logo-searchbar-cart{
+            text-align: center; 
+        }
+        
+        .contenedor-navbar{
+        display: none;
+        
+        }
+        
+        .Descripciones {
+            display: none;
+            display: initial;
+            
+    
+        }
+        
+        
+        .contenedor-de-busqueda {
+            width: 50%;
+            padding: 20px;
+            align-self: center;
+        
+        }
+        
+        .logo-mercado {
+            width: 50%;
+            padding: 20px;
+        }
+        
+        .tarjeta-de-credito{
+            text-align: center;
+            align-self: center;
+            display: none;
+        }
+        
+        .input-busqueda {
+            width: 90%;
+        }
+        
+        article {
+           margin-bottom: 10px; 
+           width: 95%;
+        }
+        
+        
+        .contenedor-descripcion-producto {
+            position: relative;
+            border-top: 1px solid #ebebeb;
+            background-color: white;
+            padding: 15px;
+            
+            
+        }
+        
+        
+        .logo-y-busqueda{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .precio {
+            width: 30%;
+        }
+        
+        .Descuestos{
+            color: #39b54a
+        
+        }
+        
+        .precio-descuento {
+            display: flex;
+            
+        }
+        
+        * {
+            margin: 0px ;
+            padding: 0px ;
+            box-sizing: border-box ;
+        
+        }
+        
+        .contenedor-descripcion-producto i {
+            color: #39b54a;
+            display: block;
+            font-size: 16px;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #39b54a;
+            background-color: #FFF;
+            border-radius: 50%;
+            position: absolute;
+            right: 20px;
+            top: -15px; 
+            transition: initial;
+            transition-property:initial
+            
+            }
+        
+        .contenedor-descripcion-producto i:hover {
+        
+            transition-duration: 0s;
+            
+        }
+        
+        
+        .productos{
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        
+        
+        .product-img {
+            width: 100%;
+        }
+        
+        .contenedor-ingresá {
+            width: 50%;
+        
+        }
+        
+        .contenedor-ofertas{
+            width: 50%;
+        }
+        
+        .lista-oferta {
+            padding-left: 20px;
+            list-style: none;
+            display: flex;
+            color: #03264C;
+        
+        }
+        
+        .lista-oferta li {
+            padding: 0px 10px;
+        }
+        
+        .contenedor-lista-ingresá{
+            list-style: none;
+            display: flex;
+            justify-content: end;
+            margin-bottom: 0px;
+        }
+        
+        .contenedor-lista-ingresá li {
+            padding: 0px 10px;
+            color: #03264C;
+            
+        }
+        
+        .contenedor-lista-ingresá li i {
+            margin-left: 5px;
+        }
+        
+        
+        
+/* aca termina el footer
