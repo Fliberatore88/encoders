@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('./../../database/models');
 
 const productsFilePath = path.join(__dirname, '../../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -74,10 +75,12 @@ const productsController = {
   productCreateForm: (req, res)=> {
     res.render ('./products/productCreateForm')
   },
-  products: (req, res)=> {
+  products: async (req, res)=> {
     // Sleep for refresh after delete or update
     var waitTill = new Date(new Date().getTime() + 1.5 * 1000);
     while(waitTill > new Date()){}
+
+    const products = await db.Product.findAll();
 
     res.render ('./products/products',{products})
   },

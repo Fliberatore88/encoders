@@ -59,10 +59,4 @@ app.listen(process.env.PORT || 3005, (err) => {
 })
 const db = require('./database/models');
 
-// Prueba de conexión a la base de datos ok 13abr
-// db.Product.findAll()
-// .then((resultados) => {
-//        console.log(resultados);
-// });
-
 module.exports = app;

@@ -25,7 +25,7 @@
                             <h3> <strong><%= product.name %></strong> </h3>
                             <strong>$<%= product.price %></strong>
                             <br>
-                            <div class="contenedor-cuotas"> en Hasta <%= product.monthly_payments %> cuotas sin interés</div>
+                            <div class="contenedor-cuotas"> en Hasta <%= product.monthlyPayment %> cuotas sin interés</div>
                             <div class="contenedor-envio"><%= product.shipping %></div>
                             <br>
                             <button onclick="location.href='/products/detailProduct/<%= product.id %>'">Ver detalle</button>
