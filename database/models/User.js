@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
           type: DataTypes.STRING
   
       },
-      rememberme: {
+      rememberMe: {
           type: DataTypes.INTEGER
       },
       image: {
