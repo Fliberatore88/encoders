@@ -4,8 +4,24 @@
 body {
     
     background-color: white;
+    width:100%;
 
 }
+
+footer {
+    top: 0px !important;
+ }
+ 
+.row1 {
+    width: 75px;
+    height: 50px;
+}
+
+.row2{
+    width: 75px;
+    height: 50px;
+}
+
 
 /* .contenedor-wrapper  {
     width: 100%;
@@ -79,14 +95,15 @@ margin-bottom: 30px;
    padding: 10px; ;
     }
 
-footer {
-   top: 0px !important;
-}
 
 
 
      */
+     footer {
+        top: 500px !important;
+     }
 
+     
      .table-responsive{
         display: flex;
         align-items: center;
