@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const mainRoutes = require ('./src/routes/mainRoutes');
 const usersRoutes = require ('./src/routes/usersRoutes');
 const productsRoutes = require ('./src/routes/productsRoutes');
+const apiproductsRouter = require('./src/routes/apis/products')
 const session = require('express-session');
 const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware')
 
@@ -32,7 +33,9 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 
 app.use ('/', mainRoutes);
 app.use ('/products', productsRoutes);
+app.use('/api/products',apiproductsRouter);
 app.use ('/users', usersRoutes);
+
 
 app.use((req, res, next) => {
     res.status(404).render('errors/error404');
@@ -60,3 +63,5 @@ app.listen(process.env.PORT || 3005, (err) => {
 const db = require('./database/models');
 
 module.exports = app;
+
+//
