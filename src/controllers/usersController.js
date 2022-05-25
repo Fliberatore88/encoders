@@ -30,7 +30,7 @@ const usersController = {
         old: req.body,
       });
     }
-    
+
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
@@ -48,10 +48,14 @@ const usersController = {
   edit: (req, res) => {},
   update: (req, res) => {},
   login: (req, res) => {
+    let check = bcryptjs.compareSync('Federico1!', '$2a$10$8SvV3JY3ifV98FIX/sp.7.2qWe.8F5FciHc4gzBWxZ37DTqS5HMle')
+    console.log(check)
+    console.log(bcryptjs.decodeBase64('$2a$10$8SvV3JY3ifV98FIX/sp.7.2qWe.8F5FciHc4gzBWxZ37DTqS5HMle', 10))
     res.render("./users/login");
   },
 
   enterLogin: (req, res) => {
+   
     let userToLogin = User.findByField("email", req.body.email);
 
     if (userToLogin) {
