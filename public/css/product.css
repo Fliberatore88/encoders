@@ -89,6 +89,7 @@ body {
  .titleProducts {
     display: flex;
     color: #39b54a;
+    width: 100%;
     align-items: center;
     margin: 10px;
     padding: 10px; 
