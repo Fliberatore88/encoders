@@ -3,7 +3,8 @@ module.exports = (sequelize, DataTypes) => {
     cols = {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         name: {
             type: DataTypes.STRING
@@ -50,6 +51,13 @@ module.exports = (sequelize, DataTypes) => {
           timestamps: false,  
   //Si no tengo timestamps
        });
+
+       Product.associate = function (models) {
+        Product.belongsTo(models.Discount, { // models.Discount -> Genres es el valor de alias en genres.js
+            as: "discount",
+            foreignKey: "discountId"
+        })
+    }
   
     return Product;
   }

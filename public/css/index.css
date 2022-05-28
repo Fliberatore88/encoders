@@ -311,8 +311,6 @@ h4 {
     padding-right: 20px;
 }
 
-
-
 main {
     
     width: 90%; 
@@ -340,8 +338,6 @@ display: none;
     display: none;
     display: initial;
     
-
-
 }
 
 
@@ -712,8 +708,8 @@ footer{
 
  h2 {
     color: #39b54a !important;
-    padding: 50px;
-    height: 50px;
+    width: 100%;
+    padding: 50px 20px;
     justify-content: center;
     align-items: center;
     background-repeat: no-repeat;

@@ -38,14 +38,14 @@
 						</div>
 
 						<div class="product-detail-price">
-							<p> Descuento $<%= product.discount%></p>
+							<p> Descuento <%= product.discount.name%></p>
 						</div>
 
 	
 						<ul class="actions-list">
 							<li>
 								<i class="fas fa-credit-card"></i>
-								<p>Pagá en  <%= product.monthly_payments%> cuotas sin interes</p>
+								<p>Pagá en  <%= product.monthlyPayment%> cuotas sin interes</p>
 							</li>
 							
 							<li>
