@@ -2,7 +2,8 @@ module.exports = (sequelize, DataTypes) => {
   cols = {
       id: {
           type: DataTypes.INTEGER,
-          primaryKey: true
+          primaryKey: true,
+          autoIncrement: true
       },
       name: {
           type: DataTypes.STRING
@@ -34,9 +35,8 @@ module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define("User", cols,
      {
         tableName: 'users', 
-//Si el nombre de la tabla no coincide con el del modelo
         timestamps: false,  
-//Si no tengo timestamps
+
      });
 
   return User;

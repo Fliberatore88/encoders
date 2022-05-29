@@ -1,15 +1,19 @@
 const { validationResult } = require("express-validator");
 const path = require("path");
-const User = require(path.resolve("./MODELOPRUEBA/User"));
+//const User = require(path.resolve("./MODELOPRUEBA/User"));
 const bcryptjs = require("bcryptjs");
+const User = require("../../database/models/User");
+const db = require (path.resolve ('./database/models'))
+
+
 const usersController = {
   index: (req, res) => {},
   register: (req, res) => {
     res.render("./users/register");
   },
-  create: (req, res) => {
+  create: async (req, res) => {
     const resultValidation = validationResult(req);
-    console.log(req.body)
+    //console.log(req.body)
     if (resultValidation.errors.length > 0) {
       return res.render("./users/register", {
         errors: resultValidation.mapped(),
@@ -17,10 +21,13 @@ const usersController = {
       });
     }
 
-    let userByEmailInDB = User.findByField("email", req.body.email);
-    //let userByUsernameDB = User.findByField('username', req.body.username);
+  let userByEmailInDB = await db.User.findOne( {
+    where: {
+      email: req.body.email
+    }
+  });
 
-    if (userByEmailInDB) {
+    if (userByEmailInDB && userByEmailInDB.email === req.body.email) {
       return res.render("./users/register", {
         errors: {
           email: {
@@ -34,15 +41,21 @@ const usersController = {
     let userToCreate = {
       ...req.body,
       password: bcryptjs.hashSync(req.body.password, 10),
+
       //confirmPassword:bcryptjs.hashSync(req.body.confirmPassword, 10),
       image: "default.png"
     }
     delete userToCreate.confirmPassword
-    
+    console.log(req.body)
     if (req.file && req.file.filename) {
       userToCreate.image = req.file.filename;
     }
-    let userCreated = User.create(userToCreate);
+    if ( req.body && req.body.rememberMe == null) {
+      userToCreate.rememberMe = 0
+    } else {
+      userToCreate.rememberMe = 1
+    }
+    let userCreated = db.User.create(userToCreate);
     return res.redirect("/users/userProfile");
   },
   edit: (req, res) => {},
@@ -54,11 +67,16 @@ const usersController = {
     res.render("./users/login");
   },
 
-  enterLogin: (req, res) => {
-   
-    let userToLogin = User.findByField("email", req.body.email);
+  enterLogin: async (req, res) => {
+    
+    let userToLogin = await db.User.findOne( {
+      where: {
+        email: req.body.email
+      }
+    })
 
-    if (userToLogin) {
+ 
+    if (userToLogin && userToLogin.email === req.body.email) {
       let isPasswordOk = bcryptjs.compareSync(
         req.body.password,
         userToLogin.password
@@ -67,7 +85,7 @@ const usersController = {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
 
-        if (req.body.remember_me) {
+        if (req.body.rememberMe) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
         }
         return res.redirect("/users/userProfile");
