@@ -13,7 +13,7 @@ body {
 
     text-align: center;
     margin-top: 10em;
-    margin-bottom: 10em;
+    margin-bottom: 10em; 
     margin: 2em;
     padding: 2em;
     background-color: rgba (255,255,255,0.7);
@@ -80,6 +80,17 @@ body {
     font-weight: 100;
     text-align: center;
    
+
+}
+
+
+.buttonedit{
+    color: #39b54a !important;
+    align-items:left;
+    margin: 10px;
+    padding: 10px; 
+    text-decoration: underline;
+    width: 500px;
 
 }
 

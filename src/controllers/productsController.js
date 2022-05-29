@@ -9,10 +9,13 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
   detail: (req,res) => {
-    const idToFind = req.params.id
-		const product = products.find ( p =>  p.id == idToFind )
-		
-		return res.render ('./products/detailProduct', { product })
+    db.Product.findByPk(req.params.id, 
+      {
+        include : ['discount']
+      })
+      .then(product => {
+          res.render('./products/detailProduct', { product });
+      });
   },
   car: (req,res) => {
     res.render ('./products/productCar')
@@ -22,24 +25,24 @@ const productsController = {
   },
   // Create -  Method to store
 	store: (req, res) => {
-    console.log('producto agr', req.body);
 		const newProduct =  req.body;
     newProduct.category = "Pc de escritorio";
     newProduct.brand = "Intel";
     newProduct.discount = 10;
     newProduct.shipping = "Envío gratis";
-    newProduct.monthly_payments = 12;
+    newProduct.monthlyPayment = 12;
 		const newProductImage = req.file;
 	
 		if (req.file && newProductImage.size < 3145728) {
 			
     productsController.createNewProduct(newProduct,newProductImage)	
-		
-		products.push (newProduct)
-
-		productsController.dbReWrite()
-
-		res.redirect ('/products')
+    db.Product
+        .create(
+          newProduct
+        )
+        .then(()=> {
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
 
 	} else if (req.file && newProductImage.size > 3145729) {
 		res.send('El archivo es demasiado pesado')
@@ -49,15 +52,12 @@ const productsController = {
 	},
   createNewProduct: function (newProduct,newProductImage) {
 
-		newProduct.id = productsController.asignIdToProduct();
 		newProduct.price = Number(newProduct.price);
 		newProduct.image = newProductImage.filename;
-		
-		if (newProduct.discount == '') {
-			newProduct.discount = 0
-		} else {
-			newProduct.discount = Number(newProduct.discount)
-		}
+    //TODO: se deben agregar los cambios al formulario
+    newProduct.categoryId = 1;
+    newProduct.brandId = 1;
+    newProduct.discountId = 2;
 	},
 	asignIdToProduct: function () {
 		return products[products.length -1].id +1;
@@ -66,10 +66,13 @@ const productsController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
 	},
   editProduct: (req,res) => {
-    const idToFind = req.params.id
-		const product = products.find ( p =>  p.id == idToFind )
-		
-		return res.render ('./products/editProduct', {product})
+    db.Product.findByPk(req.params.id, 
+      {
+        include : ['discount']
+      })
+      .then(product => {
+          res.render('./products/editProduct', { product });
+      });
 
   },
   productCreateForm: (req, res)=> {
@@ -86,31 +89,34 @@ const productsController = {
   },
   // Delete - Delete one product from DB
 	deletetProduct: (req, res) => {
-		const idToFind = req.params.id
-		const deletedProducts = products.filter ( p =>  p.id != idToFind )
-		
-		fs.writeFileSync(productsFilePath, JSON.stringify(deletedProducts, null, 2))
-		
-    // await new Promise(resolve => setTimeout(resolve, 50));
-    res.redirect('/products')
+    let productId = req.params.id;
+    db.Product
+    .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+    .then(()=>{
+        return res.redirect('/products')})
+    .catch(error => res.send(error)) 
 	},
   // Update - Method to update
-	update: (req, res) => {
-		
-    const idToFind = req.params.id
-    const productIndex = products.findIndex(product => product.id == idToFind )
-    const editedProduct = req.body;
+	update: (req, res) => {    
+    let productId = req.params.id;
+    const editedProduct = {
+      name: req.body.name,
+      description: req.body.description,
+      price: Number(req.body.price),
+    };
 
-    products[productIndex].name = editedProduct.name;
-    products[productIndex].description = editedProduct.description;
-    products[productIndex].price = Number(editedProduct.price);
- 
     if (req.file) {
-    products[productIndex].image = req.file.filename;
-    }
-    productsController.dbReWrite()
-
-  return res.redirect('/products')
+      editedProduct.image = req.file.filename;
+    };
+    
+    db.Product
+    .update(editedProduct,
+        {
+            where: {id: productId}
+        })
+    .then(()=> {
+        return res.redirect('/products')})            
+    .catch(error => res.send(error))
 },
 
 }
