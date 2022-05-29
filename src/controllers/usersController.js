@@ -7,7 +7,7 @@ const db = require (path.resolve ('./database/models'))
 
 
 const usersController = {
-  index: (req, res) => {},
+
   register: (req, res) => {
     res.render("./users/register");
   },
@@ -107,9 +107,6 @@ const usersController = {
     });
   },
   profile: (req, res) => {
-    //console.log(req.cookies.userEmail)
-    /*findOne acá
-    if (req.params.id !== )*/
     res.render("./users/userProfile", {
       user: req.session.userLogged,
     });

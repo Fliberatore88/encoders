@@ -79,6 +79,10 @@ const productsController = {
     res.render ('./products/productCreateForm')
   },
   products: async (req, res)=> {
+    if (req.query && req.query.searcher !== undefined) {
+      productsController.searcher()
+      return res.send(productsController.searcher.productFound)
+    }
     // Sleep for refresh after delete or update
     var waitTill = new Date(new Date().getTime() + 1.5 * 1000);
     while(waitTill > new Date()){}
@@ -86,6 +90,15 @@ const productsController = {
     const products = await db.Product.findAll();
 
     res.render ('./products/products',{products})
+  },
+  searcher: async (req,res) => {
+    console.log(req.query)
+    if (req.query && req.query.searcher === undefined) {
+      let productFound = await db.Product.findByPk(1)
+      return(productFound)
+     
+    }
+    res.send('hola')
   },
   // Delete - Delete one product from DB
 	deletetProduct: (req, res) => {

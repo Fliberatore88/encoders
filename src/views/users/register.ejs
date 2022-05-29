@@ -36,7 +36,7 @@
                                     </div>
                                     <div class="container-confirmPassword">
                                         <label for="confirmPassword"></label>
-                                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Ingresá nuevamente tu contraseña" value="<%= locals.old && old.confirmPassword %>">
+                                        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Ingresá nuevamente tu contraseña">
                                         <% if ( locals.errors && locals.errors.confirmPassword ) { %>
                                             <%= errors.confirmPassword.msg %>  
                                      
@@ -79,7 +79,7 @@
                                 <p>Recuperar mi contraseña</p>
                             </div>
                             <div class="container-register">
-                                <a href="/users/register">
+                                <a href="/users/login">
                                     <p>Loguearme</p>
                                 </a>
                             </div>
