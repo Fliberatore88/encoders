@@ -13,17 +13,17 @@ footer {
  }
  
 .row1 {
-    width: 75px;
+    width: 50px;
     height: 50px;
 }
 
 .row2{
-    width: 75px;
+    width: 50px;
     height: 50px;
 }
 
      footer {
-        top: 500px !important;
+        top: 250px !important;
      }
 
      
@@ -39,14 +39,21 @@ footer {
      }
 
      .titleProducts1 {
-        display: flex;
-        color: #39b54a;
-        width: 100%;
-        align-items: center;
-        margin: 10px;
-        padding: 10px; 
-        text-decoration: underline;
+    display: flex;
+    color: #39b54a;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 10px;
+    padding: 10px; 
+    text-decoration: underline;
      }
+
+     .product-detail-img {
+         width: 100%;
+     }
+
+
 
 
     

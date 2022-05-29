@@ -1,21 +1,16 @@
 <%- include ('../partials/head.ejs') %>
 
 	<%- include('../partials/header.ejs') %>
+	
 		<section>
-			
-            
-			<!-- product detail -->
-			<div class="container products-wrapper">
-				 <h3 class="products-title"> Detalle del producto: 
-					<!-- <%= product.name %> - -->
-				</h3>
-
-			
-
-			<div class="buttonListProduct">
-                <button onclick="location.href='/products'">Volver a listado de productos</button>
-            </div>
-		</div>
+			<div class="titleProducts">
+				<h3> Detalle del producto:</h3>
+	
+				<div class="buttonProducts">
+					<button onclick="location.href='/products'">Volver a listado de productos</button>
+				</div>
+			</div>
+    
 			
 	
 			<div class="product-detail">
@@ -62,11 +57,11 @@
 						<div class="contenedor-botones-productos" style="display: flex">
 							<!--a href="/products/<%= product.id %>" class="action-button edit">EDITAR PRODUCTO</a-->
 							<form action="/products/<%= product.id %>/editProduct" method="GET">
-								<button type="submit" class="action-button edit">Editar Productos</button>
+								<button type="submit" class="action-button edit">Editar Producto</button>
 							</form>
 						
 							<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-								<button type="submit" class="action-button delete">Eliminar Productos</button>
+								<button type="submit" class="action-button delete">Eliminar Producto</button>
 							</form>
 						
 							<form action="/products/car" method="GET">
@@ -78,5 +73,6 @@
 				</div>
 			</div>
 		</section>
+	</main>
 	
 		<%- include('../partials/footer.ejs') %>
