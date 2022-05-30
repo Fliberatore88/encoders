@@ -3,10 +3,11 @@
 <%- include('../partials/header.ejs') %>
 
 
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets5.lottiefiles.com/packages/lf20_q7uarxsb.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
-
-<h1>No encontramos lo que estás buscando.</h1>
+<script class="errorMonkey" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<div class="errorMonkey">
+<lottie-player  src="https://assets5.lottiefiles.com/packages/lf20_q7uarxsb.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+</div>
+<h1 class="error">No encontramos lo que estás buscando.</h1>
 
 
 <%- include('../partials/footer.ejs') %>

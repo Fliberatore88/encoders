@@ -149,6 +149,17 @@ main {
     position: relative;
     margin-bottom: -200px;    
 }
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #39b54a
+}
+.errorMonkey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .caja-login {
     margin-top: 10em;
     margin-bottom: 10em;
