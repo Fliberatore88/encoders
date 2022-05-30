@@ -83,9 +83,16 @@ const productsController = {
     if (req.query.searcher) {
      const products = await db.Product.findAll({
        where: {
-        //[Op.like]: {name: 'hat'},
-        description: {[Op.like]: '%'+req.query.searcher+'%'}
-       }
+        [Op.or]: [
+          {
+        name: {[Op.like]: '%'+req.query.searcher+'%'}
+       },
+       {
+      description: 
+        {[Op.like]: '%'+req.query.searcher+'%'}
+      }
+      ]
+    }
      })
      return res.render ('./products/products',{products})
     }
