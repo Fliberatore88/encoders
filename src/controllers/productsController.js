@@ -94,6 +94,9 @@ const productsController = {
       ]
     }
      })
+     if (products.length == []) {
+       return res.render (path.resolve('./src/views/errors/error404.ejs'))
+     }
      return res.render ('./products/products',{products})
     }
     // Sleep for refresh after delete or update
