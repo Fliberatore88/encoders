@@ -231,7 +231,10 @@ main {
 position: absolute;
 left: 90%;
 text-align: center;
-display: block;
+display: none;
+}
+.far-fa-eye {
+    display: none;
 }
 .eyelash-slash { 
     position: absolute;
