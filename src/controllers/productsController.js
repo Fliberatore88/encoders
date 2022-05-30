@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('./../../database/models');
+const Op = db.Sequelize.Op
 
 const productsFilePath = path.join(__dirname, '../../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -79,9 +80,14 @@ const productsController = {
     res.render ('./products/productCreateForm')
   },
   products: async (req, res)=> {
-    if (req.query && req.query.searcher !== undefined) {
-      productsController.searcher()
-      return res.send(productsController.searcher.productFound)
+    if (req.query.searcher) {
+     const products = await db.Product.findAll({
+       where: {
+        //[Op.like]: {name: 'hat'},
+        description: {[Op.like]: '%'+req.query.searcher+'%'}
+       }
+     })
+     return res.render ('./products/products',{products})
     }
     // Sleep for refresh after delete or update
     var waitTill = new Date(new Date().getTime() + 1.5 * 1000);
@@ -90,15 +96,6 @@ const productsController = {
     const products = await db.Product.findAll();
 
     res.render ('./products/products',{products})
-  },
-  searcher: async (req,res) => {
-    console.log(req.query)
-    if (req.query && req.query.searcher === undefined) {
-      let productFound = await db.Product.findByPk(1)
-      return(productFound)
-     
-    }
-    res.send('hola')
   },
   // Delete - Delete one product from DB
 	deletetProduct: (req, res) => {

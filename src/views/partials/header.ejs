@@ -10,16 +10,17 @@
                     <button type="submit"><img src="/images/search.png"></button>
                 </form>
             </div>
+            
             <ul class="nav-bar">
+                <% if (locals.isLogged) { %>
+                <img src="/images/users/<%= locals.userLogged.image %>" width="50" style="border-radius: 100%" alt="User img">
                 <li><a href="/">Home</a></li>
                 <li><a href="/products">Products</a></li>
-                
-                <% if (locals.isLogged) { %>
-                    <img src="/images/users/<%= locals.userLogged.image %>" width="80" style="border-radius: 100%" alt="User img">
-                    <li>Hola <%= locals.userLogged.name %></li>
-                    <li><a href="/users/userProfile">Profile</a></li>
+                    <li> <a href="/users/userProfile">Hola <%= locals.userLogged.name %></a> </li>
                     <li><a href="/users/logout">Logout</a></li>
                 <% } else { %>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
                 <li class="nav-item"><a class="nav-link" href="/users/login">Log In</a></li>
                 <li class="nav-item"><a class="nav-link" href="/users/register">Register</a></li>
                 <% } %>
