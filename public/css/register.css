@@ -13,14 +13,17 @@ body {
 
 /* HEADER */
 .container-header {
-    margin-top: -20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 75px;
-    background-color: #0d47a1;
-    color: white;
-}
+    
+        margin-top: -20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 75px;
+        background-color: #0d47a1;
+        color: white;
+        height: 150px;
+    }
+
 
 .search-bar{
     width: 100%;
@@ -139,8 +142,6 @@ body {
 .nav-active{
     transform: translateX(0%);
 }
-
-
 /* HEADER */
 
 
@@ -360,4 +361,5 @@ text-align: center;
 footer {
     top: 300px;
     position: relative;
+    color:#0d47a1;
 }

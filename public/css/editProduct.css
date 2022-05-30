@@ -16,39 +16,44 @@ body {
     margin-bottom: 10em; 
     margin: 2em;
     padding: 2em;
-    background-color: rgba (255,255,255,0.7);
+    background-color: #ffffffb3;
     border-radius: 10px;
     padding-top: 1.5em;
     box-shadow: 0 0 5px 2px #39b54a;
     height: 500px;
-   
+    width: 95%;
    
     
 
     
 }
 
+.container_registro_2 input::placeholder{
+    color: rgba(57, 181, 74, 0.4);
+}
+
+.container_registro_2.edit_form {
+    height: 580px;
+}
+
+.container_registro_2.edit_form label {
+    font-weight: 300;
+}
 
 .container_nombre{
-
-    background-color: #f8f5f2;
     border-radius: 3px;
-    border: solid 1px #ddd;
     font-size: 14px;
     min-height: 40px;
     width: 100%;
     font-weight: 100;
     text-align: center;
-    padding:10px;
 
     
 }
 
 
 .descripcion{
-    background-color: #f8f5f2;
     border-radius: 3px;
-    border: solid 1px #ddd;
     font-size: 14px;
     min-height: 40px;
     width: 100%;
@@ -59,9 +64,7 @@ body {
 
 
 .imagen{
-    background-color: #f8f5f2;
     border-radius: 3px;
-    border: solid 1px #ddd;
     font-size: 14px;
     min-height: 40px;
     width: 100%;
@@ -71,9 +74,7 @@ body {
 
 
 .precio{
-    background-color: #f8f5f2;
     border-radius: 3px;
-    border: solid 1px #ddd;
     font-size: 14px;
     min-height: 40px;
     width: 100%;
